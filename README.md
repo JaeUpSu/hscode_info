@@ -23,7 +23,7 @@
 ## 도메인
 
     - [ ] admin Model
-        - [ ] columns : name, info, email
+        - [ ] columns : id, password, name, info, email
 
     - [ ] users Model
         - [ ] columns : name, tel, email, request
