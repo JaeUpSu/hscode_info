@@ -146,13 +146,8 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CSRF_COOKIE_NAME = 'XSRF-TOKEN'
-CSRF_HEADER_NAME = 'X-XSRF-TOKEN'
+CSRF_COOKIE_SAMESITE = None
 
-CSRF_TRUSTED_ORIGINS = (
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-)
 
 CORS_ALLOW_HEADERS = (
     'access-control-allow-credentials',
@@ -170,7 +165,5 @@ CORS_ALLOW_HEADERS = (
     'host',
     'origin',
     'user-agent',
-    'X-CSRFToken',
-    'csrftoken',
     'x-requested-with',
 )

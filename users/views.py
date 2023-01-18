@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 
-# 조회 / 생성
 class Users(APIView):
     def get(self, request):
         model = User.objects.all()
@@ -21,8 +20,6 @@ class Users(APIView):
             return Response(serializer.data)
         return Response(serializer.errors)
 
-
-# Create your views here.
 class Modify_Users(APIView):
     def get_object(self, user_id):
         try:
