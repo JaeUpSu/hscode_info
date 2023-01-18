@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Oswald:wght@300&display=swap");
+
+.linked_box {
+  margin: 50px 0px;
+}
+
+.linked_list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.linked_item {
+  margin: 0px 20px;
+  text-align: center;
+  width: 150px;
+}

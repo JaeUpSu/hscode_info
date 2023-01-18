@@ -35,3 +35,35 @@
 
     - [ ] Model methods
         - [ ] methods : add, remove, update, show
+
+
+    - [ ] react
+        - [ ] header
+            - [ ] top-menu
+              - [ ] It's me
+              - [ ] portfolio
+              - [ ] linked in
+              - [ ] contact me
+
+        - [ ] container
+            - [ ] porfile
+                - [ ] img
+                - [ ] info
+
+            - [ ] portfolio
+                - [ ] title
+                - [ ] contents
+                - [ ] gif or video
+
+            - [ ] linked in
+                - [ ] velog
+                - [ ] git
+                - [ ] instagram
+
+        - [ ] footer
+            - [ ] email
+            - [ ] contact me btn
+
+        - [ ] modal
+            - [ ] contact me
+                - [ ] django model user data input

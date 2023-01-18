@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Oswald:wght@300;400&display=swap");
+
+.profile_box {
+  display: flex;
+  /* padding-left: 170px; */
+  justify-content: center;
+  margin: 50px 0px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.profile_img {
+  width: 250px;
+  border-radius: 30%;
+  margin-right: 60px;
+}
+
+.profile_text_box {
+  width: 450px;
+  height: 250px;
+  border: 10%;
+  padding: 10px;
+  color: rgb(211, 211, 211);
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+}
