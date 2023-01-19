@@ -1,0 +1,13 @@
+.portfolio {
+  text-align: center;
+}
+.carousel {
+  margin: 0px 10px;
+  width: 65%;
+}
+.carousel_between {
+  margin-top: 20px;
+}
+.carousel_title {
+  font-size: 50px;
+}

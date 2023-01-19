@@ -10,3 +10,7 @@
 .navbar_list_btn_img {
   width: 100%;
 }
+
+.nav_item:hover {
+  background-color: rgb(223, 255, 160);
+}

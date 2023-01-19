@@ -7,7 +7,7 @@ function Nav() {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="shadow-sm navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" onClick={logging}>
             Info {"{ "}
@@ -33,17 +33,17 @@ function Nav() {
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item" className={styles.nav_item}>
                 <a class="nav-link active" aria-current="page" href="#">
                   It's Me
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" className={styles.nav_item}>
                 <a class="nav-link" href="#">
                   Linked-in
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" className={styles.nav_item}>
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -54,17 +54,17 @@ function Nav() {
                   Port-Folio
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
+                  <li className={styles.nav_item}>
                     <a class="dropdown-item" href="#">
                       Action
                     </a>
                   </li>
-                  <li>
+                  <li className={styles.nav_item}>
                     <a class="dropdown-item" href="#">
                       Another action
                     </a>
                   </li>
-                  <li>
+                  <li className={styles.nav_item}>
                     <a class="dropdown-item" href="#">
                       Something else here
                     </a>

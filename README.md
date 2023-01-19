@@ -67,3 +67,6 @@
         - [ ] modal
             - [ ] contact me
                 - [ ] django model user data input
+
+- https://www.mongodb.com/
+  밑에 slide 참고하기
