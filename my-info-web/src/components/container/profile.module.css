@@ -1,5 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Oswald:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 
+.marquee {
+  height: 470px;
+  perspective: 1000px;
+  /* background-image: url("/image/background.png"); */
+}
+
+.info {
+  position: absolute;
+  z-index: 10;
+  font-size: 35px;
+  top: 40%;
+  left: 40%;
+  font-family: "Paytone One", sans-serif;
+  color: rgb(46, 46, 46);
+}
 .profile_box {
   display: flex;
   /* padding-left: 170px; */
@@ -17,27 +32,12 @@
   align-items: center;
 }
 
-.profile_text_box {
-  display: table;
-  width: 450px;
-  top: 50%;
-  height: 250px;
-  border: 10%;
-  padding: 10px;
-  margin-right: 20px;
-  color: rgb(46, 46, 46);
+.text_box {
+  border-radius: 10%;
+  background-color: whitesmoke;
+  width: auto;
+  height: 100%;
   font-size: 25px;
-  font-family: "Oswald", sans-serif;
-}
-.profile_text {
-  display: table-cell;
-  vertical-align: middle;
-}
-.profile_text_more {
-  position: absolute;
-  bottom: 1%;
-  right: 5%;
-  font-family: "Oswald", sans-serif;
 }
 
 .lang_box {
@@ -46,7 +46,7 @@
 }
 
 .lang_list {
-  background-color: rgb(223, 255, 160);
+  background-color: white;
   padding: 0px;
   list-style: none;
   display: flex;
@@ -59,7 +59,7 @@
   height: 60px;
   margin: 20px;
   text-align: center;
-  box-shadow: 0 2px 2px 0px white;
+  box-shadow: 0 2px 2px 1px black;
 }
 
 .lang_item:hover {
