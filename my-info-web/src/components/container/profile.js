@@ -1,22 +1,3 @@
-// function Profile() {
-//   // return (
-//   //   <div className={styles.profile_box}>
-//   //     <img
-//   //       className={styles.profile_img}
-//   //       src="//w.namu.la/s/c9b951140de72f66425f2f5523cd2a4aa0a796a5c67e4c8363782e249d58f9d4fbbd977b1c6fd8d0fcecf5ee70a146619ee15c502a074c547f931384a97d69e5d47069d61f108598b469b0374b6480ca970c720be5cdcc4ab0d6c5e2dcbbc1f3"
-//   //     />
-//   //     <div className={styles.profile_text_box}>
-//   //       <p className={styles.profile_text}>
-//   //         Hello, My name is KHS.
-//   //         <br />
-//   //         I'am Back-End Developer.
-//   //         <br />
-//   //         <br />
-//   //         My Goal is Full-stack Developer.
-//   //         <br />
-//   //         Of course, I still know how to play front.
-//   //       </p>
-
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import times from "lodash/times";
@@ -67,6 +48,7 @@ const Logo = styled.img`
 
 const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
   const [key, setKey] = useState(nanoid());
+  const [hello, setHello] = useState("안녕");
 
   useEffect(() => {
     setKey(nanoid());
@@ -86,15 +68,50 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
     scale = 1;
   }
 
+  const hi_list = [
+    "안녕",
+    "Hello",
+    "こんにちは",
+    "你好",
+    "hallo",
+    "Hola",
+    "Привет",
+    "สวัสดี",
+    "olá",
+    "salut",
+    "Сайн уу",
+    "ciao",
+    "xin chào",
+  ];
+  // const [index, setIndex] = useState(1);
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     console.log(index);
+
+  //     setHello(hi_list[index]);
+  //     if (index < 12) {
+  //       setIndex(index + 1);
+  //       console.log(" if " + index);
+  //     } else {
+  //       setIndex(0);
+  //       console.log(" else " + index);
+  //     }
+  //   }, 3000);
+  // }, []);
+
+  // ** 인풋에 변화(onChange)가 일어났을 때 위 setInterval처럼 clearInterval을 하고 새로운
+  // 변화 값(delay)를 넣어주지 않아도 알아서 인터벌을 새로 설정하는 것을 볼 수 있다
+
   return (
     <FullWidth>
       <Height height={500}>
         <Marquee
           key={key}
           velocity={12}
-          scatterRandomly
           minScale={0.7}
           resetAfterTries={200}
+          scatterRandomly
           onInit={onStartPerformance}
           onFinish={onEndPerformance}
         >
@@ -106,25 +123,25 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
               velocity={5}
               radius={scale * 100}
             >
-              <Company scale={scale * 1.3}>
+              <Company scale={scale * 1.5}>
                 <Logo src={icons[id]} alt="" />
               </Company>
             </Motion>
           ))}
         </Marquee>
-        <p
-          className={styles.info}
-          stlye="background-image:url(../../image/background.png)"
-        >
-          Hello, My name is KHS.
-          <br />
-          I'am Back-End Developer.
-          <br />
-          My Goal is Full-stack Developer.
-          <br />
-          Of course, I still know how to play front.
-        </p>
       </Height>
+      <p
+        className={styles.info}
+        stlye="background-image:url(../../image/background.png)"
+      >
+        Hi, My name is KHS.
+        <br />
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
     </FullWidth>
   );
 };

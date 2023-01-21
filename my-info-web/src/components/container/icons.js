@@ -8,6 +8,9 @@ import js from "../../image/js.png";
 import lightsail from "../../image/lightsail.png";
 import python from "../../image/python.png";
 import react from "../../image/react.png";
+import instagram from "../../image/instagram.jpg";
+import github from "../../image/github.png";
+import velog from "../../image/velog.png";
 
 const icons = [
   css,
@@ -20,6 +23,9 @@ const icons = [
   lightsail,
   python,
   react,
+  instagram,
+  github,
+  velog,
 ];
 
 export default icons;

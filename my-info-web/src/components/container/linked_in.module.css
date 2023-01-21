@@ -13,5 +13,18 @@
 .linked_item {
   margin: 0px 20px;
   text-align: center;
-  width: 150px;
+  width: 250px;
+  height: 100px;
+  padding: 10px;
+}
+
+.linked_img {
+  width: 200px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.linked_item:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
 }
