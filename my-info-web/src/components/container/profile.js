@@ -112,7 +112,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
   return (
     <>
       <FullWidth>
-        <Height height={700}>
+        <Height height={850}>
           <Marquee
             key={key}
             velocity={12}
@@ -162,6 +162,9 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
             You can't wait to see my works, Click here!!
           </p>
         </div>
+        <p className={styles.view_description}>
+          The things flying on the screen are skills I know how to do.
+        </p>
       </FullWidth>
 
       <p>

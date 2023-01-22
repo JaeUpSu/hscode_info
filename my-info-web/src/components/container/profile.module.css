@@ -10,7 +10,7 @@
   z-index: 10;
   font-size: 35px;
   top: 30%;
-  left: 40%;
+  left: 38%;
   text-align: center;
   font-family: "Paytone One", sans-serif;
   padding: 10px;
@@ -24,11 +24,22 @@
   text-align: center;
 }
 
+.view_description {
+  position: absolute;
+  z-index: 10;
+  font-family: "Paytone One", sans-serif;
+  color: black;
+  opacity: 70%;
+  font-size: 13px;
+  right: 2%;
+  top: 96%;
+}
+
 .baro {
   position: absolute;
   z-index: 10;
   top: 85%;
-  left: 49%;
+  left: 46%;
   font-size: 15px;
   font-family: "Paytone One", sans-serif;
   text-align: center;
