@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+import { withSize } from "react-sizeme";
+import { nanoid } from "nanoid";
+
 import styled from "styled-components";
 import times from "lodash/times";
 import Marquee, { Motion, randomIntFromInterval } from "react-marquee-slider";
-import { withSize } from "react-sizeme";
-import { nanoid } from "nanoid";
 import icons from "./icons.js";
 import styles from "./profile.module.css";
 
@@ -48,10 +50,11 @@ const Logo = styled.img`
 
 const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
   const [key, setKey] = useState(nanoid());
-  const [hello, setHello] = useState("안녕");
+  // const [hello, setHello] = useState("안녕");
 
   useEffect(() => {
     setKey(nanoid());
+    window.scrollTo(0, 0);
   }, [size, size.width]);
 
   let scale = 0.5;
@@ -68,21 +71,24 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
     scale = 1;
   }
 
-  const hi_list = [
-    "안녕",
-    "Hello",
-    "こんにちは",
-    "你好",
-    "hallo",
-    "Hola",
-    "Привет",
-    "สวัสดี",
-    "olá",
-    "salut",
-    "Сайн уу",
-    "ciao",
-    "xin chào",
-  ];
+  // const scrollRef = useRef();
+
+  // const hi_list = [
+  //   "안녕",
+  //   "Hello",
+  //   "こんにちは",
+  //   "你好",
+  //   "hallo",
+  //   "Hola",
+  //   "Привет",
+  //   "สวัสดี",
+  //   "olá",
+  //   "salut",
+  //   "Сайн уу",
+  //   "ciao",
+  //   "xin chào",
+  // ];
+
   // const [index, setIndex] = useState(1);
 
   // useEffect(() => {
@@ -104,45 +110,257 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
   // 변화 값(delay)를 넣어주지 않아도 알아서 인터벌을 새로 설정하는 것을 볼 수 있다
 
   return (
-    <FullWidth>
-      <Height height={500}>
-        <Marquee
-          key={key}
-          velocity={12}
-          minScale={0.7}
-          resetAfterTries={200}
-          scatterRandomly
-          onInit={onStartPerformance}
-          onFinish={onEndPerformance}
+    <>
+      <FullWidth>
+        <Height height={700}>
+          <Marquee
+            key={key}
+            velocity={12}
+            minScale={0.7}
+            resetAfterTries={200}
+            scatterRandomly
+            onInit={onStartPerformance}
+            onFinish={onEndPerformance}
+          >
+            {times(10, Number).map((id) => (
+              <Motion
+                key={`marquee-example-company-${id}`}
+                initDeg={randomIntFromInterval(0, 360)}
+                direction={
+                  Math.random() > 0.5 ? "clockwise" : "counterclockwise"
+                }
+                velocity={5}
+                radius={scale * 100}
+              >
+                <Company scale={scale * 1.5}>
+                  <Logo src={icons[id]} alt="" />
+                </Company>
+              </Motion>
+            ))}
+          </Marquee>
+        </Height>
+        <p
+          className={styles.info}
+          stlye="background-image:url(../../image/background.png)"
         >
-          {times(10, Number).map((id) => (
-            <Motion
-              key={`marquee-example-company-${id}`}
-              initDeg={randomIntFromInterval(0, 360)}
-              direction={Math.random() > 0.5 ? "clockwise" : "counterclockwise"}
-              velocity={5}
-              radius={scale * 100}
-            >
-              <Company scale={scale * 1.5}>
-                <Logo src={icons[id]} alt="" />
-              </Company>
-            </Motion>
-          ))}
-        </Marquee>
-      </Height>
-      <p
-        className={styles.info}
-        stlye="background-image:url(../../image/background.png)"
-      >
-        Hi, My name is KHS.
-        <br />
+          Hi , My name is KHS.
+          <br />
+          <br />
+          <p className={styles.info_more}>
+            I'am Back-End Developer.
+            <br />
+            My Goal is Full-stack Developer.
+            <br />
+            Of course, I still know how to play front.
+          </p>
+        </p>
+        <div className={styles.baro}>
+          <Link to="1" spy={true} smooth={true}>
+            <div className={styles.baro_img}></div>
+          </Link>
+          <p className={styles.baro_text}>
+            You can't wait to see my works, Click here!!
+          </p>
+        </div>
+      </FullWidth>
+
+      <p>
         I'am Back-End Developer.
         <br />
         My Goal is Full-stack Developer.
         <br />
         Of course, I still know how to play front.
       </p>
-    </FullWidth>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p>
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+      <p id="1">
+        I'am Back-End Developer.
+        <br />
+        My Goal is Full-stack Developer.
+        <br />
+        Of course, I still know how to play front.
+      </p>
+    </>
   );
 };
 

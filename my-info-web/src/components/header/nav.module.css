@@ -1,5 +1,7 @@
 .navbar_brand_identity {
-  font-size: 5px;
+  font-size: 8px;
+  color: #00ed64;
+  font-weight: bold;
 }
 
 .navbar_list_btn {

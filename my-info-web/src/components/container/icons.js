@@ -11,6 +11,7 @@ import react from "../../image/react.png";
 import instagram from "../../image/instagram.jpg";
 import github from "../../image/github.png";
 import velog from "../../image/velog.png";
+import arrow from "../../image/arrow.gif";
 
 const icons = [
   css,
@@ -26,6 +27,7 @@ const icons = [
   instagram,
   github,
   velog,
+  arrow,
 ];
 
 export default icons;
