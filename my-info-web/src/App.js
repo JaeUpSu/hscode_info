@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <Nav />
         <Profile />
-        {/* <PortFolio /> */}
+        <PortFolio />
         <Linked_In />
         <RestAPI />
       </header>

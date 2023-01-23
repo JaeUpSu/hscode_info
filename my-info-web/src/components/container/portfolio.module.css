@@ -1,5 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
 .portfolio {
   text-align: center;
+}
+.portfolio_box {
+  display: flex;
+}
+.portfolio_btn {
+  width: 100px;
+  height: 50px;
+  line-height: 46px;
+  background-color: #00ed64;
+  border: 2px solid #00ed64;
+  border-radius: 20%;
+  margin: 100px 20px;
+  margin-bottom: 150px;
+  font-family: "Paytone One", sans-serif;
+  cursor: pointer;
+}
+.portfolio_btn:hover {
+  background-color: #ffffff;
+  transition: all 0.8s;
 }
 .carousel {
   margin: 0px 10px;
