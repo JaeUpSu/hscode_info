@@ -2,6 +2,7 @@ import "./App.css";
 import RestAPI from "./RestAPI.js";
 import Nav from "./components/header/nav";
 import ItsMe from "./components/container/ItsMe";
+import Modal from "./components/container/modal";
 import PortFolio from "./components/container/portfolio";
 import Profile from "./components/container/profile";
 import Linked_In from "./components/container/linked_in";
@@ -12,6 +13,7 @@ function App() {
       <header className="App-header">
         <Nav />
         <Profile />
+        <Modal />
         <ItsMe />
         <PortFolio />
         <Linked_In />
