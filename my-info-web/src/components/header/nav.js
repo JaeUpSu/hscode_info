@@ -139,14 +139,6 @@ function Nav() {
               <button type="button" class="btn btn-primary">
                 Send message
               </button>
-              <button
-                class="btn btn-primary"
-                data-bs-target="#exampleModalToggle2"
-                data-bs-toggle="modal"
-                data-bs-dismiss="modal"
-              >
-                Open second modal
-              </button>
             </div>
           </div>
         </div>

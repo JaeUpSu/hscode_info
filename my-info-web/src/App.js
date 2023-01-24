@@ -13,7 +13,6 @@ function App() {
       <header className="App-header">
         <Nav />
         <Profile />
-        <Modal />
         <ItsMe />
         <PortFolio />
         <Linked_In />
