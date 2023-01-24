@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Oswald:wght@300&display=swap");
+
+.itsme_label {
+  font-family: "Paytone One", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.itsme_body {
+  text-align: center;
+}

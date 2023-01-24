@@ -3,6 +3,15 @@
 .portfolio {
   text-align: center;
 }
+
+.portfolio_label {
+  font-family: "Paytone One", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  text-align: center;
+  margin: 100px 0px;
+}
+
 .portfolio_box {
   display: flex;
 }
@@ -13,8 +22,8 @@
   background-color: #00ed64;
   border: 2px solid #00ed64;
   border-radius: 20%;
-  margin: 100px 20px;
-  margin-bottom: 150px;
+  margin: 50px 20px;
+  margin-bottom: 100px;
   font-family: "Paytone One", sans-serif;
   cursor: pointer;
 }

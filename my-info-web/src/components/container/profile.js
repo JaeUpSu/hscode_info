@@ -111,7 +111,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
 
   return (
     <>
-      <FullWidth>
+      <FullWidth className={styles.marquee_box}>
         <Height height={850}>
           <Marquee
             key={key}

@@ -3,7 +3,8 @@ import icons from "./icons.js";
 
 function Linked_In() {
   return (
-    <div className={styles.linked_box}>
+    <div id="3" className={styles.linked_box}>
+      <h1 className={styles.linked_label}>Linked-in</h1>
       <ul class="linked_list" className={styles.linked_list}>
         <li class="linked_item" className={styles.linked_item}>
           <button type="button" class="btn btn-dark">

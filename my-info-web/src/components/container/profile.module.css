@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 
+.marquee_box {
+  margin-top: 55px;
+}
+
 .marquee {
   height: 470px;
   perspective: 1000px;
@@ -10,7 +14,7 @@
   z-index: 10;
   font-size: 35px;
   top: 30%;
-  left: 38%;
+  left: 39%;
   text-align: center;
   font-family: "Paytone One", sans-serif;
   padding: 10px;
@@ -39,7 +43,7 @@
   position: absolute;
   z-index: 10;
   top: 85%;
-  left: 43%;
+  left: 42%;
   font-size: 15px;
   font-family: "Paytone One", sans-serif;
   text-align: center;
@@ -97,14 +101,43 @@
   font-size: 25px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1250px) {
   .info {
     font-size: 32px;
-    left: 32%;
+    left: 34%;
+  }
+
+  .view_description {
+    top: 2%;
   }
 
   .baro {
-    left: 47%;
+    left: 39%;
+  }
+}
+
+@media (max-width: 950px) {
+  .info {
+    font-size: 32px;
+    left: 31%;
+  }
+
+  .view_description {
+    top: 2%;
+  }
+
+  .baro {
+    left: 37%;
+  }
+}
+
+@media (max-width: 850px) {
+  .info {
+    left: 28%;
+  }
+
+  .baro {
+    left: 35%;
   }
 }
 
@@ -113,6 +146,10 @@
     font-size: 30px;
     top: 27%;
     left: 30%;
+  }
+
+  .baro {
+    left: 39%;
   }
 }
 
