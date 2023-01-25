@@ -8,9 +8,9 @@ function Nav() {
 
   return (
     <>
-      <nav class="shadow-sm navbar navbar-expand-lg bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand text-light" href="#" onClick={logging}>
+          <a class="navbar-brand text-dark" href="#" onClick={logging}>
             Info {"{ "}
             <span className={styles.navbar_brand_identity}>
               {"Write Yourself"}
@@ -34,10 +34,11 @@ function Nav() {
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item" className={styles.nav_item}>
+              <li class="nav-item">
                 <Link to="1" spy={true} smooth={true}>
                   <a
-                    class="nav-link active text-light"
+                    class="nav-link text-dark"
+                    className={styles.nav_link}
                     aria-current="page"
                     href="#"
                   >
@@ -45,16 +46,24 @@ function Nav() {
                   </a>
                 </Link>
               </li>
-              <li class="nav-item" className={styles.nav_item}>
+              <li class="nav-item">
                 <Link to="2" spy={true} smooth={true}>
-                  <a class="nav-link text-light" href="#">
+                  <a
+                    class="nav-link text-dark"
+                    href="#"
+                    className={styles.nav_link}
+                  >
                     Port-Folio
                   </a>
                 </Link>
               </li>
-              <li class="nav-item" className={styles.nav_item}>
+              <li class="nav-item">
                 <Link to="3" spy={true} smooth={true}>
-                  <a class="nav-link text-light" href="#">
+                  <a
+                    class="nav-link text-dark"
+                    href="#"
+                    className={styles.nav_link}
+                  >
                     Linked-in
                   </a>
                 </Link>
@@ -66,7 +75,7 @@ function Nav() {
 
             <form class="d-flex">
               <button
-                class="btn btn-outline-success"
+                class="btn text-dark bg-transparent border-dark"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 data-bs-whatever="@getbootstrap"

@@ -1,6 +1,6 @@
 .navbar_brand_identity {
   font-size: 8px;
-  color: #00ed64;
+  color: #000;
   font-weight: bold;
 }
 
@@ -12,9 +12,15 @@
 .navbar_list_btn_img {
   width: 100%;
 }
-
-.nav_item:hover {
-  background-color: #00ed64;
+.nav_link {
+  text-decoration-line: none;
+  color: black;
+  margin-left: 20px;
+  font-size: 15px;
+}
+.nav_link:hover {
+  border-bottom: 2px solid #000;
+  color: black;
 }
 
 .modal_lebel {

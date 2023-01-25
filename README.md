@@ -68,5 +68,9 @@
             - [ ] contact me
                 - [ ] django model user data input
 
-- https://www.mongodb.com/
-  밑에 slide 참고하기
+<br>
+
+## 사용한 GIT API
+
+- https://github.com/mxmzb/react-marquee-slider
+- https://github.com/tengbao/vanta

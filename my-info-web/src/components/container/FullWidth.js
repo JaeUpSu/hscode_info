@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background_img from "../../image/background.png";
 
 // ty Chris https://css-tricks.com/full-width-containers-limited-width-parents/
 const FullWidth = styled.div`
@@ -9,9 +8,7 @@ const FullWidth = styled.div`
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-image: url(${background_img});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: transparent;
 `;
 
 export default FullWidth;

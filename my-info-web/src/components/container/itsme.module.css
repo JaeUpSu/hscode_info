@@ -5,9 +5,20 @@
   font-size: 32px;
   font-weight: 200;
   text-align: center;
-  margin: 100px 0px;
+  position: relative;
+  top: 990px;
 }
 
 .itsme_body {
   text-align: center;
+  margin-top: 850px;
+}
+
+.marquee_box {
+  top: 900px;
+  background-color: transparent;
+}
+
+.itsme_container {
+  background-color: bisque;
 }

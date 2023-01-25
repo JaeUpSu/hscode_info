@@ -1,9 +1,11 @@
 import styles from "./itsme.module.css";
+import ItsMeBg from "./ItsMeBg";
 
 function ItsMe() {
   return (
-    <div id="1">
+    <div id="1" className={styles.itsme_container}>
       <h1 className={styles.itsme_label}>Its Me</h1>
+      <ItsMeBg />
       <div className={styles.itsme_body}>
         <p>
           I'am Back-End Developer.
