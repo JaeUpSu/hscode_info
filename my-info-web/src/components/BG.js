@@ -10,14 +10,28 @@ const BG = () => {
       setVantaEffect(
         CLOUDS({
           el: myRef.current,
+          // mouseControls: true,
+          // touchControls: true,
+          // gyroControls: false,
+          // minHeight: 900.0,
+          // minWidth: 200.0,
+          // backgroundColor: 0xc51818,
+          // skyColor: 0xd79868,
+          // cloudColor: 0xdeadc7,
+          // speed: 1.6,
+
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
           minHeight: 900.0,
           minWidth: 200.0,
-          backgroundColor: 0xc51818,
-          skyColor: 0xd79868,
-          cloudColor: 0xdeadc7,
+          backgroundColor: 0xf92525,
+          skyColor: 0xa3bff2,
+          cloudColor: 0xbfadf2,
+          cloudShadowColor: 0x144572,
+          sunColor: 0xffe918,
+          sunGlareColor: 0xff5830,
+          sunlightColor: 0xf7e8e8,
           speed: 1.6,
         })
       );

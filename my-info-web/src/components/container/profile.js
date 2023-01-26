@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import styles from "./profile.module.css";
+import icons from "./icons.js";
 
 const Profile = () => {
   return (
@@ -20,15 +20,12 @@ const Profile = () => {
         </p>
         <div className={styles.baro}>
           <Link to="1" spy={true} smooth={true}>
-            <div className={styles.baro_img}></div>
+            <img className={styles.baro_img} src={icons[13]}></img>
           </Link>
           <p className={styles.baro_text}>
             You can't wait to see my works, Click here!!
           </p>
         </div>
-        <p className={styles.view_description}>
-          The things flying on the screen are skills I know how to do.
-        </p>
       </div>
     </>
   );

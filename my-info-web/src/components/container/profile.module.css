@@ -19,17 +19,6 @@
   text-align: center;
 }
 
-.view_description {
-  position: absolute;
-  z-index: 10;
-  font-family: "Paytone One", sans-serif;
-  color: black;
-  opacity: 70%;
-  font-size: 13px;
-  right: 2%;
-  top: 800px;
-}
-
 .baro {
   position: absolute;
   z-index: 10;
@@ -40,7 +29,6 @@
   text-align: center;
   width: 260px;
   height: 90px;
-  background-color: rgba(255, 255, 255, 0.4);
 }
 .baro_text {
   margin-bottom: 5px;
@@ -48,15 +36,12 @@
 .baro_img {
   position: absolute;
   z-index: 10;
-  top: 55%;
+  top: 67%;
   left: 40%;
   width: 48px;
   height: 48px;
-  background-image: transparent;
+  background-image: url("../../image/arrow.gif");
 }
-
-/* .baro_img {
-} */
 
 .bg_circle {
   height: 300px;
