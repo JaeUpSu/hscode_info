@@ -8,10 +8,14 @@ import js from "../../image/js.png";
 import lightsail from "../../image/lightsail.png";
 import python from "../../image/python.png";
 import react from "../../image/react.png";
+import rds from "../../image/rds.png";
+import mysql from "../../image/mysql.png";
+import ec2 from "../../image/ec2.png";
 import instagram from "../../image/instagram.jpg";
 import github from "../../image/github.png";
 import velog from "../../image/velog.png";
 import arrow from "../../image/arrow.gif";
+import linkedin from "../../image/linkedin.png";
 
 const icons = [
   css,
@@ -24,10 +28,14 @@ const icons = [
   lightsail,
   python,
   react,
+  rds,
+  mysql,
+  ec2,
   instagram,
   github,
   velog,
   arrow,
+  linkedin,
 ];
 
 export default icons;

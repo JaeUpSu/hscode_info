@@ -75,7 +75,7 @@ function Nav() {
 
             <form class="d-flex">
               <button
-                class="btn text-dark bg-transparent border-dark"
+                class="btn text-dark bg-dark text-white border-dark"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 data-bs-whatever="@getbootstrap"

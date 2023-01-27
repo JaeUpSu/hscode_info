@@ -56,62 +56,24 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
     window.scrollTo(0, 0);
   }, [size, size.width]);
 
-  let scale = 0.5;
+  let scale = 0.3;
 
   if (size && size.width > 800) {
-    scale = 0.65;
+    scale = 0.5;
   }
 
   if (size && size.width > 1100) {
-    scale = 0.8;
+    scale = 0.65;
   }
 
   if (size && size.width > 1400) {
-    scale = 1;
+    scale = 0.8;
   }
-
-  // const scrollRef = useRef();
-
-  // const hi_list = [
-  //   "안녕",
-  //   "Hello",
-  //   "こんにちは",
-  //   "你好",
-  //   "hallo",
-  //   "Hola",
-  //   "Привет",
-  //   "สวัสดี",
-  //   "olá",
-  //   "salut",
-  //   "Сайн уу",
-  //   "ciao",
-  //   "xin chào",
-  // ];
-
-  // const [index, setIndex] = useState(1);
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     console.log(index);
-
-  //     setHello(hi_list[index]);
-  //     if (index < 12) {
-  //       setIndex(index + 1);
-  //       console.log(" if " + index);
-  //     } else {
-  //       setIndex(0);
-  //       console.log(" else " + index);
-  //     }
-  //   }, 3000);
-  // }, []);
-
-  // ** 인풋에 변화(onChange)가 일어났을 때 위 setInterval처럼 clearInterval을 하고 새로운
-  // 변화 값(delay)를 넣어주지 않아도 알아서 인터벌을 새로 설정하는 것을 볼 수 있다
 
   return (
     <>
       <FullWidth className={styles.marquee_box}>
-        <Height height={650}>
+        <Height height={450}>
           <Marquee
             key={key}
             velocity={12}
@@ -121,7 +83,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
             onInit={onStartPerformance}
             onFinish={onEndPerformance}
           >
-            {times(10, Number).map((id) => (
+            {times(13, Number).map((id) => (
               <Motion
                 key={`marquee-example-company-${id}`}
                 initDeg={randomIntFromInterval(0, 360)}
@@ -131,7 +93,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
                 velocity={5}
                 radius={scale * 100}
               >
-                <Company scale={scale * 1.5}>
+                <Company scale={scale * 1.3}>
                   <Logo src={icons[id]} alt="" />
                 </Company>
               </Motion>

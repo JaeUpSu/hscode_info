@@ -9,7 +9,7 @@ function Linked_In() {
         <li class="linked_item" className={styles.linked_item}>
           <button
             type="button"
-            class="btn btn-dark"
+            class="btn btn-light"
             onClick={() =>
               window.open(
                 `${"https://www.instagram.com/s00_2oo_/"}`,
@@ -18,13 +18,13 @@ function Linked_In() {
               )
             }
           >
-            <img className={styles.linked_img} src={icons[10]}></img>
+            <img className={styles.linked_img} src={icons[13]}></img>
           </button>
         </li>
         <li class="linked_item" className={styles.linked_item}>
           <button
             type="button"
-            class="btn btn-dark"
+            class="btn btn-light"
             onClick={() =>
               window.open(
                 `${"https://github.com/JaeUpSu"}`,
@@ -33,7 +33,7 @@ function Linked_In() {
               )
             }
           >
-            <img className={styles.linked_img} src={icons[11]}></img>
+            <img className={styles.linked_img} src={icons[14]}></img>
           </button>
         </li>
         <li
@@ -47,8 +47,23 @@ function Linked_In() {
             )
           }
         >
-          <button type="button" class="btn btn-dark">
-            <img className={styles.linked_img} src={icons[12]}></img>
+          <button type="button" class="btn btn-light">
+            <img className={styles.linked_img} src={icons[15]}></img>
+          </button>
+        </li>
+        <li
+          class="linked_item"
+          className={styles.linked_item}
+          onClick={() =>
+            window.open(
+              `${"https://www.linkedin.com/in/hyeon-soo-kim-556b8b263/"}`,
+              "_blank",
+              "noopener, noreferrer"
+            )
+          }
+        >
+          <button type="button" class="btn btn-light">
+            <img className={styles.linked_img} src={icons[17]}></img>
           </button>
         </li>
       </ul>

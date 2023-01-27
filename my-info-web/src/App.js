@@ -17,7 +17,7 @@ function App() {
         <ItsMe />
         <PortFolio />
         <Linked_In />
-        <RestAPI />
+        {/* <RestAPI /> */}
       </header>
     </div>
   );
