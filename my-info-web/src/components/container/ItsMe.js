@@ -21,7 +21,7 @@ function ItsMe() {
           Of course, I still know how to play front.
         </p>
         <div class="accordion my-5" id="accordionExample">
-          <div class="accordion-item mx-5">
+          <div class="accordion-item mx-5 my-2 border border-dark border-3">
             <h2 class="accordion-header" id="headingOne">
               <button
                 class="accordion-button .bg-light.bg-gradient text-dark"
@@ -31,7 +31,7 @@ function ItsMe() {
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
-                기
+                개발자를 마음 먹게된 개발 경험 (+ 협업)
               </button>
             </h2>
             <div
@@ -56,7 +56,7 @@ function ItsMe() {
               </div>
             </div>
           </div>
-          <div class="accordion-item mx-5">
+          <div class="accordion-item mx-5 my-2 border border-dark border-3">
             <h2 class="accordion-header" id="headingTwo">
               <button
                 class="accordion-button collapsed .bg-light.bg-gradient text-dark"
@@ -66,7 +66,7 @@ function ItsMe() {
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                승
+                CS지식과 기술적 역량
               </button>
             </h2>
             <div
@@ -91,7 +91,7 @@ function ItsMe() {
               </div>
             </div>
           </div>
-          <div class="accordion-item mx-5">
+          <div class="accordion-item mx-5 my-2 border border-dark border-3">
             <h2 class="accordion-header" id="headingThree">
               <button
                 class="accordion-button collapsed .bg-light.bg-gradient text-dark"
@@ -101,7 +101,7 @@ function ItsMe() {
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                전
+                앞으로의 방향성
               </button>
             </h2>
             <div
@@ -111,42 +111,7 @@ function ItsMe() {
               data-bs-parent="#accordionExample"
             >
               <div
-                class="accordion-body"
-                className={styles.itsme_accordion_body}
-              >
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item mx-5">
-            <h2 class="accordion-header" id="headingFour">
-              <button
-                class="accordion-button collapsed .bg-light.bg-gradient text-dark"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                결
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#accordionExample"
-            >
-              <div
-                class="accordion-body"
+                class="accordion-body bg-light"
                 className={styles.itsme_accordion_body}
               >
                 <strong>This is the third item's accordion body.</strong> It is

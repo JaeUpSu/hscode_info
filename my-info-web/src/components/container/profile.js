@@ -44,8 +44,10 @@ const Profile = () => {
   return (
     <>
       <div className={styles.profile_bg}>
+        <p className={styles.info_hello}>
+          Hello World!! &nbsp;&nbsp;My name is KHS.
+        </p>
         <p className={styles.info}>
-          Hi , My name is KHS.
           <br />
           <br />
           <p className={styles.info_more}>

@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .info {
   position: absolute;
   z-index: 10;
-  font-size: 35px;
-  top: 230px;
-  left: 38%;
+  font-size: 39px;
+  top: 260px;
+  left: 37%;
   text-align: center;
-  font-family: "Paytone One", sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 10px;
   /* background-color: rgba(30, 255, 0, 0.4); */
+}
+
+.info_hello {
+  position: absolute;
+  z-index: 10;
+  font-size: 43px;
+  top: 190px;
+  left: 32%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
 .info_more {
@@ -23,7 +35,7 @@
   position: absolute;
   z-index: 10;
   top: 750px;
-  left: 42%;
+  left: 41%;
   font-size: 15px;
   font-family: "Paytone One", sans-serif;
   text-align: center;
@@ -37,7 +49,7 @@
   position: absolute;
   z-index: 10;
   top: 67%;
-  left: 40%;
+  left: 39%;
   width: 48px;
   height: 48px;
   background-image: url("../../image/arrow.gif");

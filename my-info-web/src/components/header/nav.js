@@ -8,7 +8,7 @@ function Nav() {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top shadow p-2 px-4 mb-5 bg-body">
         <div class="container-fluid">
           <a class="navbar-brand text-dark" href="#" onClick={logging}>
             Info {"{ "}

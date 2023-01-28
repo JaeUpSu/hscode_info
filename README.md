@@ -19,6 +19,9 @@
         - [ ] admin 설정
         - [ ] urls 설정
 
+    - [ ] API 화 하기
+
+    - [ ] Admin page
 
     - [ ] AWS 호스팅
 
@@ -46,8 +49,8 @@
               - [ ] contact me
 
         - [ ] container
-            - [ ] porfile
-                - [ ] img
+            - [ ] top
+                - [ ] background
                 - [ ] info
 
             - [ ] portfolio
@@ -55,10 +58,11 @@
                 - [ ] contents
                 - [ ] gif or video
 
-            - [ ] linked in
-                - [ ] velog
-                - [ ] git
-                - [ ] instagram
+            - [x] linked in
+                - [x] velog
+                - [x] git
+                - [x] instagram
+                - [x] linked-in
 
         - [ ] footer
             - [ ] email
