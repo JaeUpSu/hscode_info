@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
 .portfolio {
   text-align: center;
+  background-color: #000000;
+  padding-top: 5px;
 }
 
 .portfolio_label {
   font-family: "Paytone One", sans-serif;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 200;
   text-align: center;
-  margin: 100px 0px;
+  margin: 90px 0 50px 0;
+  color: #bfc2f2;
 }
 
 .portfolio_box {
@@ -20,15 +24,18 @@
   height: 50px;
   line-height: 46px;
   background-color: transparent;
-  border: 2px solid #000;
+  border: 2px solid #eee;
   border-radius: 20%;
   margin: 50px 20px;
   margin-bottom: 100px;
   font-family: "Paytone One", sans-serif;
   cursor: pointer;
+  color: #bfc2f2;
 }
 .portfolio_btn:hover {
-  background-color: #ffffff;
+  background-color: #fff;
+  color: #c0a5ff;
+  transform: scale(1.1);
   transition: all 0.8s;
 }
 .carousel {

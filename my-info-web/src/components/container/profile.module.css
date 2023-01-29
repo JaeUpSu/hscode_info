@@ -18,7 +18,7 @@
   z-index: 10;
   font-size: 43px;
   top: 190px;
-  left: 31%;
+  left: 29%;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -87,6 +87,11 @@
 }
 
 @media (max-width: 1250px) {
+  .info_hello {
+    font-size: 39px;
+    left: 26%;
+  }
+
   .info {
     font-size: 32px;
     left: 34%;
@@ -102,9 +107,13 @@
 }
 
 @media (max-width: 950px) {
+  .info_hello {
+    font-size: 40px;
+    left: 20%;
+  }
   .info {
     font-size: 32px;
-    left: 31%;
+    left: 28%;
   }
 
   .view_description {
@@ -112,11 +121,15 @@
   }
 
   .baro {
-    left: 37%;
+    left: 35%;
   }
 }
 
 @media (max-width: 850px) {
+  .info_hello {
+    font-size: 38px;
+    left: 19%;
+  }
   .info {
     left: 28%;
   }
@@ -127,22 +140,29 @@
 }
 
 @media (max-width: 700px) {
+  .info_hello {
+    font-size: 33px;
+    left: 17%;
+  }
+
   .info {
     font-size: 30px;
-    top: 27%;
-    left: 30%;
+    left: 23%;
   }
 
   .baro {
-    left: 39%;
+    left: 31%;
   }
 }
 
 @media (max-width: 620px) {
+  .info_hello {
+    font-size: 33px;
+    left: 20%;
+  }
+
   .info {
-    font-size: 25px;
-    top: 27%;
-    left: 25%;
+    left: 22%;
   }
 }
 

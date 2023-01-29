@@ -20,7 +20,6 @@ function App() {
         <ItsMe />
         <PortFolio />
         <Linked_In />
-        <Modal />
         {/* <RestAPI /> */}
       </body>
     </div>

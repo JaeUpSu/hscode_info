@@ -3,8 +3,10 @@ import ItsMeBg from "./ItsMeBg";
 
 function ItsMe() {
   return (
-    <div id="1" className={styles.itsme_container}>
-      <h1 className={styles.itsme_label}>Its Me</h1>
+    <div className={styles.itsme_container}>
+      <h1 id="1" className={styles.itsme_label}>
+        Its Me
+      </h1>
 
       <p className={styles.view_description}>
         The things flying on the screen are skills I know how to do.
@@ -22,9 +24,14 @@ function ItsMe() {
         </p>
         <div class="accordion my-5" id="accordionExample">
           <div class="accordion-item mx-5 my-2 border border-dark border-3">
-            <h2 class="accordion-header" id="headingOne">
+            <h2
+              class="accordion-header p-2"
+              id="headingOne"
+              className={styles.itsme_accordion_header}
+            >
               <button
                 class="accordion-button .bg-light.bg-gradient text-dark"
+                className={styles.itsme_accordion_label}
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
@@ -57,10 +64,15 @@ function ItsMe() {
             </div>
           </div>
           <div class="accordion-item mx-5 my-2 border border-dark border-3">
-            <h2 class="accordion-header" id="headingTwo">
+            <h2
+              class="accordion-header p-2"
+              id="headingTwo"
+              className={styles.itsme_accordion_header}
+            >
               <button
                 class="accordion-button collapsed .bg-light.bg-gradient text-dark"
                 type="button"
+                className={styles.itsme_accordion_label}
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
                 aria-expanded="false"
@@ -92,10 +104,15 @@ function ItsMe() {
             </div>
           </div>
           <div class="accordion-item mx-5 my-2 border border-dark border-3">
-            <h2 class="accordion-header" id="headingThree">
+            <h2
+              class="accordion-header p-2"
+              id="headingThree"
+              className={styles.itsme_accordion_header}
+            >
               <button
                 class="accordion-button collapsed .bg-light.bg-gradient text-dark"
                 type="button"
+                className={styles.itsme_accordion_label}
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseThree"
                 aria-expanded="false"

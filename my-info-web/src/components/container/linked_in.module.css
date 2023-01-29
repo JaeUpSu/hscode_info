@@ -2,16 +2,14 @@
 
 .linked_label {
   font-family: "Paytone One", sans-serif;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 200;
   text-align: center;
-  color: white;
   margin: 0px 0px 80px 0px;
+  padding: 80px 0 20px 0;
 }
 .linked_box {
-  background-color: black;
-  padding: 15px 0px;
-  padding-top: 25px;
+  padding: 25px;
 }
 
 .linked_list {
@@ -28,12 +26,19 @@
 }
 
 .linked_img {
-  width: 150px;
   height: 50px;
   object-fit: cover;
+  width: 150px;
+  padding: 10px;
+  background-color: white;
 }
 
 .linked_item:hover {
   transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.linked_img:hover {
+  box-shadow: 0 1px 1px 3px black;
   transition: all 0.5s;
 }

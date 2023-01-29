@@ -6,10 +6,10 @@ function Linked_In() {
     <div id="3" className={styles.linked_box}>
       <h1 className={styles.linked_label}>Linked-in</h1>
       <ul class="linked_list" className={styles.linked_list}>
-        <li class="linked_item" className={styles.linked_item}>
+        <li className={styles.linked_item}>
           <button
             type="button"
-            class="btn btn-light"
+            class="p-0"
             onClick={() =>
               window.open(
                 `${"https://www.instagram.com/s00_2oo_/"}`,
@@ -21,10 +21,10 @@ function Linked_In() {
             <img className={styles.linked_img} src={icons[13]}></img>
           </button>
         </li>
-        <li class="linked_item" className={styles.linked_item}>
+        <li className={styles.linked_item}>
           <button
             type="button"
-            class="btn btn-light"
+            class="p-0"
             onClick={() =>
               window.open(
                 `${"https://github.com/JaeUpSu"}`,
@@ -37,7 +37,6 @@ function Linked_In() {
           </button>
         </li>
         <li
-          class="linked_item"
           className={styles.linked_item}
           onClick={() =>
             window.open(
@@ -47,12 +46,11 @@ function Linked_In() {
             )
           }
         >
-          <button type="button" class="btn btn-light">
+          <button type="button" class="p-0">
             <img className={styles.linked_img} src={icons[15]}></img>
           </button>
         </li>
         <li
-          class="linked_item"
           className={styles.linked_item}
           onClick={() =>
             window.open(
@@ -62,7 +60,7 @@ function Linked_In() {
             )
           }
         >
-          <button type="button" class="btn btn-light">
+          <button type="button" class="p-0">
             <img className={styles.linked_img} src={icons[17]}></img>
           </button>
         </li>

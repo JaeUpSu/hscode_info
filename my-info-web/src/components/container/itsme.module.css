@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Oswald:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 .itsme_label {
   font-family: "Paytone One", sans-serif;
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 200;
   text-align: center;
   position: relative;
@@ -12,14 +14,30 @@
 .itsme_info {
   margin-bottom: 390px;
   position: relative;
-  top: 310px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  top: 315px;
+}
+
+.itsme_accordion_label {
+  font-family: "Black Han Sans", sans-serif;
+  border: 0px;
+  background-color: #bfc2f2;
+  color: #272727;
+  padding: 0px;
+}
+
+.itsme_accordion_header {
+  background-color: #bfc2f2;
+  margin: 0px;
+  padding: 8px;
 }
 
 .itsme_accordion_body {
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Open Sans", sans-serif;
   font-size: large;
-  color: rgb(212, 212, 212);
-  background-color: rgb(30, 30, 30);
+  border-top: 3px solid black;
   padding: 40px;
 }
 
