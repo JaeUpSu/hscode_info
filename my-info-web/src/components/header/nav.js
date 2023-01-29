@@ -134,7 +134,11 @@ function Nav() {
                     <label for="message-text" class="col-form-label">
                       Message:
                     </label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea
+                      class="form-control"
+                      className={styles.modal_area}
+                      id="message-text"
+                    ></textarea>
                   </div>
                 </Modal.Body>
                 <Modal.Footer>

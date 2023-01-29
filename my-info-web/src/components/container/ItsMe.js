@@ -27,14 +27,14 @@ function ItsMe() {
             <h2
               class="accordion-header p-2"
               id="headingOne"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
               className={styles.itsme_accordion_header}
             >
               <button
                 class="accordion-button .bg-light.bg-gradient text-dark"
                 className={styles.itsme_accordion_label}
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
@@ -67,14 +67,14 @@ function ItsMe() {
             <h2
               class="accordion-header p-2"
               id="headingTwo"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
               className={styles.itsme_accordion_header}
             >
               <button
                 class="accordion-button collapsed .bg-light.bg-gradient text-dark"
-                type="button"
                 className={styles.itsme_accordion_label}
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
@@ -107,14 +107,14 @@ function ItsMe() {
             <h2
               class="accordion-header p-2"
               id="headingThree"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
               className={styles.itsme_accordion_header}
             >
               <button
                 class="accordion-button collapsed .bg-light.bg-gradient text-dark"
-                type="button"
                 className={styles.itsme_accordion_label}
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
