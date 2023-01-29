@@ -38,7 +38,7 @@ function ItsMe() {
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
-                개발자를 마음 먹게된 개발 경험 (+ 협업)
+                개발자를 마음 먹게된, 나의 개발 경험 (+ 협업)
               </button>
             </h2>
             <div
@@ -51,15 +51,43 @@ function ItsMe() {
                 class="accordion-body"
                 className={styles.itsme_accordion_body}
               >
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <strong>
+                  저의 개발자의 시작을 하게된 방아쇠는 졸업작품을 만들면서
+                  당겨졌습니다.
+                </strong>
+                <br />
+                진로를 정하지 못하고 4학년 1학기가 된 저는 컴공 전공자로
+                졸업작품을 만들어야 했습니다. 첫 졸업작품 관련 OT 를 듣고 혼자
+                개발을 하는 것보다 마음이 맞는 동료와 하는 것이 좋을 것 같아
+                동기에게 협업을 제안했습니다.
+                <br />
+                <br />
+                저희의 졸업작품의 첫 주제는 <code>다이어트</code> 였습니다.
+                이유는 가장 대중적으로 사람들이 관심있는 주제를 선정하자 였고
+                여지없이 첫 발표때 식상한 아이템에 식상한 기능을 들고와서
+                교수님께 혹평을 들었습니다. 신선한 메인 기능과 디테일한 주제가
+                필요했습니다.
+                <br />
+                <br />
+                여러 기능이 있었지만 MAP 기능을 집중해서 개발하다보니 동료와
+                여러 회의 끝에 다이어트 앱이 아닌 <code>런닝</code> 앱으로
+                방향을 틀었습니다. 이후 이 기능을 발전시켜
+                <br />
+                자기가 걸었던 거리와 시간을 고려한 여러 데이터들을 Kalman Filter
+                와 DBSCAN Clustering 그리고 DMACA 등 여러 주제와 공식을 알려주는
+                논문을 참고했습니다. 이후 해당 런닝 기록을 남겨 타인과의 경쟁
+                또한 가능한 차별점을 가진 APP 을 만들게 되었습니다.
+                <br />
+                <br />
+                이 과정 속에서 자연스럽게 각자 FRONT 와 BACK 을 맡아 개발을
+                진행했습니다. 이 과정 속에 동료와 협업하는 것과 매일 같이
+                코딩하는 것에 재미를 붙였고 최종 발표때는 저희 결과물이 교수님의
+                관심을 끌고 혹평이 아닌 꽤나 호평을 받았습니다.
+                <br />
+                <br />
+                <strong>
+                  이 여정을 통해 저의 진로를 풀스택 개발자로 정했습니다.
+                </strong>
               </div>
             </div>
           </div>
