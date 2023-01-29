@@ -36,7 +36,7 @@
   background-color: #fff;
   color: #c0a5ff;
   transform: scale(1.1);
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 .carousel {
   margin: 0px 10px;
