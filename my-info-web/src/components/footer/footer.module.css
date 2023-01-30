@@ -1,0 +1,14 @@
+.footer_box {
+  position: relative;
+}
+
+.footer_hr {
+  height: 150px;
+}
+
+.footer_manager_btn {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  padding: 15px;
+}

@@ -1,7 +1,10 @@
+import { useState } from "react";
 import styles from "./itsme.module.css";
 import ItsMeBg from "./ItsMeBg";
 
 function ItsMe() {
+  const [modify, setModify] = useState(false);
+
   return (
     <div className={styles.itsme_container}>
       <h1 id="1" className={styles.itsme_label}>
@@ -37,8 +40,15 @@ function ItsMe() {
                 className={styles.itsme_accordion_label}
                 aria-expanded="false"
                 aria-controls="collapseOne"
+                onMouseEnter={() => {
+                  setModify(true);
+                }}
+                onMouseLeave={() => {
+                  setModify(false);
+                }}
               >
-                개발자를 마음 먹게된, 나의 개발 경험 (+ 협업)
+                개발자를 마음 먹게된, 나의 개발 경험 (+ 협업){" "}
+                {/* <code class={modify ? "visible ms-5" : "invisible"}>수정</code> */}
               </button>
             </h2>
             <div
