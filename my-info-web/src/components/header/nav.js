@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import PostDB from "../../RestAPI";
 import axios from "axios";
-import { sum } from "lodash";
+
+import Swal from "sweetalert2";
 
 function Nav() {
   const [show, setShow] = useState(false);
@@ -16,13 +16,9 @@ function Nav() {
     email: "",
     request: "",
   });
-  const [submit, setSubmit] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const handleYet = () => setSubmit(false);
-  const handleComplete = () => setSubmit(true);
 
   const onChangeMessage = (e) => {
     setMessage({
@@ -31,12 +27,17 @@ function Nav() {
     });
   };
 
-  const PostDB = () => {
-    if (submit) {
-      handleClose();
-      handleYet();
-    }
-  };
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "center-center",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
 
   return (
     <>
@@ -197,6 +198,10 @@ function Nav() {
                           console.log(error);
                         });
                       handleClose();
+                      Toast.fire({
+                        icon: "success",
+                        title: `${message.name}의 메시지를 성공적으로 개발자님께 전달했습니다!`,
+                      });
                     }}
                   >
                     Send message

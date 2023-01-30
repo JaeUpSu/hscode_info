@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "manager.apps.ManagerConfig",
     "users.apps.UsersConfig",
-    "feeds.apps.FeedsConfig",
     "rest_framework",
     "corsheaders"
 ]

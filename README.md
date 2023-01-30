@@ -10,7 +10,7 @@
         - [x] git, velog, insta link 버튼
         - [x] Contact Me
             - [x] modal (개인정보, 요청사항)
-            - [ ] user DB 연동
+            - [x] user DB 연동
 
         - [ ] 편집버튼 만들기
 
@@ -83,3 +83,4 @@
 
 - https://github.com/mxmzb/react-marquee-slider
 - https://github.com/tengbao/vanta
+- https://sweetalert2.github.io/
