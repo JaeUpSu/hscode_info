@@ -1,5 +1,5 @@
 import styles from "./linked_in.module.css";
-import icons from "./icons.js";
+import linked_icons from "../linked_icons";
 
 function Linked_In() {
   return (
@@ -18,7 +18,7 @@ function Linked_In() {
               )
             }
           >
-            <img className={styles.linked_img} src={icons[13]}></img>
+            <img className={styles.linked_img} src={linked_icons[0]}></img>
           </button>
         </li>
         <li className={styles.linked_item}>
@@ -33,7 +33,7 @@ function Linked_In() {
               )
             }
           >
-            <img className={styles.linked_img} src={icons[14]}></img>
+            <img className={styles.linked_img} src={linked_icons[1]}></img>
           </button>
         </li>
         <li
@@ -47,7 +47,7 @@ function Linked_In() {
           }
         >
           <button type="button" class="p-0">
-            <img className={styles.linked_img} src={icons[15]}></img>
+            <img className={styles.linked_img} src={linked_icons[2]}></img>
           </button>
         </li>
         <li
@@ -61,7 +61,7 @@ function Linked_In() {
           }
         >
           <button type="button" class="p-0">
-            <img className={styles.linked_img} src={icons[17]}></img>
+            <img className={styles.linked_img} src={linked_icons[3]}></img>
           </button>
         </li>
       </ul>

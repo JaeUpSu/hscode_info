@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import styles from "./profile.module.css";
-import icons from "./icons.js";
+import linked_icons from "../linked_icons.js";
 
 const Profile = () => {
   // const scrollRef = useRef();
@@ -60,7 +60,7 @@ const Profile = () => {
         </p>
         <div className={styles.baro}>
           <Link to="1" spy={true} smooth={true}>
-            <img className={styles.baro_img} src={icons[16]}></img>
+            <img className={styles.baro_img} src={linked_icons[4]}></img>
           </Link>
           <p className={styles.baro_text}>
             You can't wait to see my works, Click here!!

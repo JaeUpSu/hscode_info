@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import styled from "styled-components";
 import times from "lodash/times";
 import Marquee, { Motion, randomIntFromInterval } from "react-marquee-slider";
-import icons from "./icons.js";
+import tech_icons from "../tech_icons";
 import styles from "./itsme.module.css";
 
 import FullWidth from "./FullWidth";
@@ -83,7 +83,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
             onInit={onStartPerformance}
             onFinish={onEndPerformance}
           >
-            {times(13, Number).map((id) => (
+            {times(14, Number).map((id) => (
               <Motion
                 key={`marquee-example-company-${id}`}
                 initDeg={randomIntFromInterval(0, 360)}
@@ -94,7 +94,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
                 radius={scale * 100}
               >
                 <Company scale={scale * 1.3}>
-                  <Logo src={icons[id]} alt="" />
+                  <Logo src={tech_icons[id]} alt="" />
                 </Company>
               </Motion>
             ))}

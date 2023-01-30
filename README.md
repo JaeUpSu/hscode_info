@@ -7,9 +7,12 @@
     - [ ] React : HTML/JS/CSS 구조 맞추기
         - [ ] 사진, 소개글
         - [ ] 포토폴리오 구현 영상 or 움짤 or 사진 슬라이드
-        - [ ] git, velog, insta link 버튼
-        - [ ] Contact Me
-            - [ ] modal (개인정보, 요청사항)
+        - [x] git, velog, insta link 버튼
+        - [x] Contact Me
+            - [x] modal (개인정보, 요청사항)
+            - [ ] user DB 연동
+
+        - [ ] 편집버튼 만들기
 
     - [x] Django 로 API 설계
         - [x] models 설계
@@ -24,6 +27,8 @@
     - [ ] Admin page
 
     - [ ] AWS 호스팅
+
+    - [ ] wep page 조회수
 
 ## 도메인
 

@@ -22,5 +22,5 @@ urlpatterns = [
     path("api/v1/users/", include('users.urls')),
     path("api/v1/manager/", include('manager.urls')),
     path("api/v1/feeds/", include('feeds.urls')),
-    re_path('.*', TemplateView.as_view(template_name='index.html'))
+    re_path('home/', TemplateView.as_view(template_name='index.html'))
 ]

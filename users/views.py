@@ -20,7 +20,7 @@ class Users(APIView):
             return Response(serializer.data)
         return Response(serializer.errors)
 
-class Modify_Users(APIView):
+class Modify_User(APIView):
     def get_object(self, user_id):
         try:
             return User.objects.get(pk=user_id)

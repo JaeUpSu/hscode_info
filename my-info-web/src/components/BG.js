@@ -24,7 +24,7 @@ const BG = () => {
           touchControls: true,
           gyroControls: false,
           minHeight: 900.0,
-          minWidth: 200.0,
+          minWidth: 450.0,
           backgroundColor: 0xf92525,
           skyColor: 0xa3bff2,
           cloudColor: 0xbfadf2,
