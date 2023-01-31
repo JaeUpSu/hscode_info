@@ -113,12 +113,7 @@ function Nav() {
               >
                 Contact Me !!!
               </Button>
-              <button
-                class="ms-3 border-0 bg-transparent"
-                className={styles.manage_login_key}
-              >
-                🔑
-              </button>
+              <button className={styles.manage_login_key}>🔑</button>
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                   <Modal.Title>Request</Modal.Title>

@@ -30,7 +30,7 @@ function PortFolio() {
           autocomplete="off"
         />
         <label className={styles.portfolio_btn} for="btnradio2">
-          WCW
+          My-Info
         </label>
 
         <input
@@ -41,7 +41,7 @@ function PortFolio() {
           autocomplete="off"
         />
         <label className={styles.portfolio_btn} for="btnradio3">
-          Shopping
+          WCW
         </label>
       </div>
     </div>

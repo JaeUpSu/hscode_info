@@ -4,8 +4,6 @@ import "./index.css";
 import App from "./App";
 import axios from "axios";
 
-import ScrollToTop from "./ScrollToTop";
-
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 axios.defaults.withCredentials = true;

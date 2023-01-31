@@ -33,6 +33,11 @@
   border: 1px solid rgb(207, 207, 207);
   resize: none;
 }
+.manage_login_key {
+  background-color: transparent;
+  margin-left: 20px;
+  border: transparent;
+}
 .manage_login_key :hover {
   background-color: gray;
   border-radius: 50%;

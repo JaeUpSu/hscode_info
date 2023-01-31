@@ -32,14 +32,11 @@
 
 ## 도메인
 
-    - [x] admin Model
-        - [x] columns : id, password, name, info, email
-
     - [x] users Model
         - [x] columns : name, tel, email, request
 
     - [x] feeds Model
-        - [x] columns : id, url, image, title, content
+        - [x] columns : id, content, created
 
     - [ ] Model methods
         - [ ] methods : add, remove, update, show
