@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "classnames": "^2.3.2",
     "embla-carousel": "^7.0.6",
     "embla-carousel-autoplay": "^7.0.6",
     "embla-carousel-react": "^7.0.6",
+    "node-sass": "^8.0.0",
     "react-cookie": "^4.1.1"
   }
 }

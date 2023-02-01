@@ -2,9 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
 .portfolio {
-  text-align: center;
-  background-color: #191919;
+  background-color: #e4f2ff;
+  padding-bottom: 100px;
   padding-top: 5px;
+  text-align: center;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 }
 
 .portfolio_label {
@@ -13,38 +16,102 @@
   font-weight: 200;
   text-align: center;
   margin: 90px 0 50px 0;
-  color: #bfc2f2;
+  color: #000000;
 }
 
-.portfolio_box {
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+  .item_1 {
+    grid-column: 1 / span 2;
+  }
+  .item_1 h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* card */
+
+.card {
+  min-height: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
 }
-.portfolio_btn {
-  width: 100px;
-  height: 50px;
-  line-height: 46px;
-  background-color: transparent;
-  border: 2px solid #eee;
-  border-radius: 20%;
-  margin: 50px 20px;
-  margin-bottom: 100px;
-  font-family: "Paytone One", sans-serif;
-  cursor: pointer;
-  color: #bfc2f2;
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
-.portfolio_btn:hover {
-  background-color: #fff;
-  color: #c0a5ff;
-  transform: scale(1.1);
-  transition: all 0.5s;
+
+.card_article {
+  padding: 20px;
+  display: flex;
+
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
 }
-.carousel {
-  margin: 0px 10px;
-  width: 65%;
+.card_thumb_one {
+  background-image: url("../../image/my_info.png");
 }
-.carousel_between {
-  margin-top: 20px;
+.card_thumb_two {
+  background-image: url("../../image/runner8.png");
 }
-.carousel_title {
-  font-size: 50px;
+.card_thumb_three {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);
+}
+.card_thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center center;
+}
+
+.card_text {
+  flex: 1; /* make p grow to fill available space*/
+  line-height: 1.4;
+}
+
+/* typography */
+.card_title {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.card_cat {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
 }
