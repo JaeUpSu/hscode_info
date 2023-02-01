@@ -4,9 +4,10 @@ import { Link } from "react-scroll";
 
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import axios from "axios";
 
 import Swal from "sweetalert2";
+import RequestValidate from "../../validator/request_validate";
+import RequestPost from "../../data/request_post";
 
 function Nav() {
   const [show, setShow] = useState(false);
@@ -38,6 +39,18 @@ function Nav() {
       toast.addEventListener("mouseleave", Swal.resumeTimer);
     },
   });
+
+  const sendMessage = () => {
+    if (RequestValidate(message)) {
+      return;
+    }
+    RequestPost(message);
+    handleClose();
+    Toast.fire({
+      icon: "success",
+      title: `${message.name}의 메시지를 성공적으로 개발자님께 전달했습니다!`,
+    });
+  };
 
   return (
     <>
@@ -145,6 +158,7 @@ function Nav() {
                       class="form-control"
                       id="recipient-tel"
                       name="tel"
+                      placeholder="- 없이 연락처를 입력해주세요. (선택)"
                       onChange={onChangeMessage}
                     />
                   </div>
@@ -181,30 +195,7 @@ function Nav() {
                   >
                     닫기
                   </Button>
-                  <Button
-                    variant="btn btn-primary"
-                    onClick={() => {
-                      axios
-                        .post("http://127.0.0.1:8000/api/v1/users/", {
-                          name: message.name,
-                          tel: message.tel,
-                          email: message.email,
-                          request: message.request,
-                          created: new Date(),
-                        })
-                        .then((response) => {
-                          console.log(response);
-                        })
-                        .catch((error) => {
-                          console.log(error);
-                        });
-                      handleClose();
-                      Toast.fire({
-                        icon: "success",
-                        title: `${message.name}의 메시지를 성공적으로 개발자님께 전달했습니다!`,
-                      });
-                    }}
-                  >
+                  <Button variant="btn btn-primary" onClick={sendMessage}>
                     Send message
                   </Button>
                 </Modal.Footer>
