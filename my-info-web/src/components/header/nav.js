@@ -1,5 +1,5 @@
 import styles from "./nav.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
 import Modal from "react-bootstrap/Modal";
@@ -10,7 +10,11 @@ import RequestValidate from "../../validator/request_validate";
 import RequestPost from "../../data/request_post";
 
 function Nav() {
+  const [loginModalShow, setLoginModalShow] = useState(false);
   const [show, setShow] = useState(false);
+
+  const [pw, setPw] = useState("");
+  const [loginOn, setLoginOn] = useState(false);
   const [message, setMessage] = useState({
     name: "",
     tel: "",
@@ -18,6 +22,14 @@ function Nav() {
     request: "",
   });
 
+  const handleLoginClose = (e) => {
+    // e.preventDefault();
+    setLoginModalShow(false);
+  };
+  const handleLoginShow = (e) => {
+    e.preventDefault();
+    setLoginModalShow(true);
+  };
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -32,7 +44,7 @@ function Nav() {
     toast: true,
     position: "center-center",
     showConfirmButton: false,
-    timer: 3000,
+    timer: 2500,
     timerProgressBar: true,
     didOpen: (toast) => {
       toast.addEventListener("mouseenter", Swal.stopTimer);
@@ -50,6 +62,26 @@ function Nav() {
       icon: "success",
       title: `${message.name}의 메시지를 성공적으로 개발자님께 전달했습니다!`,
     });
+  };
+
+  const password = "admin123";
+
+  const onChangePW = (e) => {
+    setPw(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    e.preventDefault();
+    if (password !== pw) {
+      alert("비밀번호가 틀렸습니다!");
+      return;
+    }
+    Toast.fire({
+      icon: "success",
+      title: "성공적으로 로그인!",
+    });
+    setLoginOn(true);
+    handleLoginClose();
   };
 
   return (
@@ -126,7 +158,41 @@ function Nav() {
               >
                 Contact Me !!!
               </Button>
-              <button className={styles.manage_login_key}>🔑</button>
+              <button
+                className={styles.manage_login_key}
+                onClick={handleLoginShow}
+              >
+                🔑
+              </button>
+              {loginModalShow ? (
+                <div className={styles.login_modal_bg}>
+                  <div className={styles.login_modal}>
+                    <p className={styles.login_label}>Password</p>
+                    <input
+                      className={styles.login_input}
+                      type="password"
+                      name="password"
+                      onChange={onChangePW}
+                    ></input>
+                    <div className={styles.login_options}>
+                      <button
+                        className={styles.login_btn}
+                        onClick={handlePassword}
+                      >
+                        Yes
+                      </button>
+                      <button
+                        className={styles.login_btn}
+                        onClick={handleLoginClose}
+                      >
+                        No
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                " "
+              )}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                   <Modal.Title>Request</Modal.Title>

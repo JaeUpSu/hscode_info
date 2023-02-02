@@ -5,7 +5,9 @@
     "embla-carousel": "^7.0.6",
     "embla-carousel-autoplay": "^7.0.6",
     "embla-carousel-react": "^7.0.6",
+    "gsap": "^3.11.4",
     "node-sass": "^8.0.0",
-    "react-cookie": "^4.1.1"
+    "react-cookie": "^4.1.1",
+    "react-pdf": "^6.2.2"
   }
 }

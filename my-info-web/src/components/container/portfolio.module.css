@@ -67,8 +67,8 @@
 }
 
 .card:hover {
-  top: -2px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  top: -5px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card_article {
@@ -84,6 +84,9 @@
 }
 .card_thumb_two {
   background-image: url("../../image/runner8.png");
+}
+.card_thumb_two strong {
+  margin-top: 30px;
 }
 .card_thumb_three {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);

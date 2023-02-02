@@ -3,7 +3,7 @@ import linked_icons from "../linked_icons";
 
 function Linked_In() {
   return (
-    <div id="3" className={styles.linked_box}>
+    <div id="3">
       <h1 className={styles.linked_label}>Linked-in</h1>
       <ul class="linked_list" className={styles.linked_list}>
         <li className={styles.linked_item}>

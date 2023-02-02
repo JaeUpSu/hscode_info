@@ -5,11 +5,8 @@
   font-size: 38px;
   font-weight: 200;
   text-align: center;
-  margin: 0px 0px 80px 0px;
-  padding: 80px 0 20px 0;
-}
-.linked_box {
-  padding: 25px;
+  margin: 0 0 30px;
+  padding: 30px 0 20px;
 }
 
 .linked_list {
@@ -22,7 +19,7 @@
   margin: 0px 20px;
   text-align: center;
   width: 250px;
-  height: 100px;
+  height: 90px;
 }
 
 .linked_img {
@@ -33,13 +30,9 @@
   background-color: white;
 }
 
-.linked_item:hover {
-  transform: scale(1.05);
-  transition: all 0.5s;
-}
-
 .linked_img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 1px 1px 4.5px black;
+  transform: scale(1.02);
+  top: -4px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
 }
