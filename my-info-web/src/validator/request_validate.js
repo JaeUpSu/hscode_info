@@ -15,7 +15,7 @@ const RequestValidate = (context) => {
     return true;
   }
   if (context.request.length <= 10) {
-    alert("요청사항을 입력해주세요!");
+    alert("요청사항을 10자이상 입력해주세요!");
     return true;
   }
   return false;

@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import Swal from "sweetalert2";
 import RequestValidate from "../../validator/request_validate";
 import RequestPost from "../../data/request_post";
+import { sendRequest } from "../../data/slack_bot";
 
 function Nav() {
   const [loginModalShow, setLoginModalShow] = useState(false);
