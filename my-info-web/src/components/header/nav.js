@@ -25,10 +25,12 @@ function Nav() {
   const handleLoginClose = (e) => {
     // e.preventDefault();
     setLoginModalShow(false);
+    document.body.style.overflow = "unset";
   };
   const handleLoginShow = (e) => {
     e.preventDefault();
     setLoginModalShow(true);
+    document.body.style.overflow = "hidden";
   };
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
