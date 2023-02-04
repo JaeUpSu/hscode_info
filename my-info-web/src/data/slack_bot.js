@@ -11,12 +11,11 @@ const txt = (msg) => {
   } ${"\n"}request: ${msg.request}`;
 };
 
-const TOKEN = "xoxb-4722906445298-4744922791058-7ruiieGCj4jPXINBreblx3Pr";
+const TOKEN = "token id";
 
-const CHANNEL_ID = "C04MTUVAP7X";
+const CHANNEL_ID = "channel id";
 
-const HOOK_URL =
-  "https://hooks.slack.com/services/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";
+const HOOK_URL = "hookurl";
 
 export const sendRequest = async (msg) => {
   try {
