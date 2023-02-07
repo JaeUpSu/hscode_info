@@ -5,16 +5,8 @@ from .serializers import UserSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
-import requests
+from .utils.discord_bot import send_message
 
-def slack(serializer):
-    slack_url = "https://hooks.slack.com/services/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"
-
-        
-    headers = {'Content-type': 'application/json'}
-
-    response = requests.post(slack_url, data=serializer.data, headers=headers)
-    return response
 class Users(APIView):
     def get(self, request):
         model = User.objects.all()
@@ -26,7 +18,7 @@ class Users(APIView):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            slack(serializer)
+            send_message(serializer.data)
             return Response(serializer.data)
         return Response(serializer.errors)
 

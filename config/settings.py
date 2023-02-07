@@ -75,8 +75,12 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'my-info-web', 'build', 'static')
+    os.path.join(BASE_DIR, 'my-info-web', 'build','static')
 ]
+
+WEBPACK_LOADER = {
+    'MANIFEST_FILE': os.path.join(BASE_DIR, "my-info-web/build.manifest.json")
+}
 
 WSGI_APPLICATION = "config.wsgi.application"
 
