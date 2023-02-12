@@ -5,26 +5,25 @@
 ## 기능
 
     - [ ] React : HTML/JS/CSS 구조 맞추기
-        - [ ] 사진, 소개글
+        - [x] 사진, 소개글
         - [ ] 포토폴리오 구현 영상 or 움짤 or 사진 슬라이드
         - [x] git, velog, insta link 버튼
         - [x] Contact Me
             - [x] modal (개인정보, 요청사항)
             - [x] user DB 연동
+            - [x] discord bot 연동
 
-        - [ ] 편집버튼 만들기
+        - [x] 편집버튼 만들기
+            - [x] 각 text 에 수정버튼
+            - [x] feeds DB 연동
 
     - [x] Django 로 API 설계
         - [x] models 설계
-            - [x] admin, users, feeds
+            - [x] users, feeds
         - [ ] serializers 설계
         - [ ] views 설계
         - [ ] admin 설정
         - [ ] urls 설정
-
-    - [ ] API 화 하기
-
-    - [ ] Admin page
 
     - [ ] AWS 호스팅
 
@@ -43,21 +42,21 @@
 
 
     - [ ] react
-        - [ ] header
-            - [ ] top-menu
-              - [ ] It's me
-              - [ ] portfolio
-              - [ ] linked in
-              - [ ] contact me
+        - [x] header
+            - [x] top-menu
+              - [x] It's me
+              - [x] portfolio
+              - [x] linked in
+              - [x] contact me
 
         - [ ] container
             - [ ] top
-                - [ ] background
-                - [ ] info
+                - [x] background
+                - [x] info
 
             - [ ] portfolio
-                - [ ] title
-                - [ ] contents
+                - [x] title
+                - [x] contents
                 - [ ] gif or video
 
             - [x] linked in
@@ -66,13 +65,10 @@
                 - [x] instagram
                 - [x] linked-in
 
-        - [ ] footer
-            - [ ] email
-            - [ ] contact me btn
-
-        - [ ] modal
-            - [ ] contact me
-                - [ ] django model user data input
+        - [x] modal
+            - [x] contact me
+                - [x] django model user data input
+                - [x] discord bot make
 
 <br>
 
