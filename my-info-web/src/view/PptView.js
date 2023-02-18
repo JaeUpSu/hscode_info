@@ -1,7 +1,8 @@
 // import React from "react";
-// import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+// import { usePDF, Document, Page, pdfjs } from "react-pdf";
+// import { Text, View, StyleSheet } from "@react-pdf/renderer";
 
-// import {pdfjs} from"@mik"
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 // // Create styles
 // const styles = StyleSheet.create({
@@ -17,58 +18,113 @@
 // });
 
 // // Create Document Component
-// const MyDocument = () => (
-//   <Document>
-//     <Page size="A4" style={styles.page}>
-//       <View style={styles.section}>
-//         <Text>Section #1</Text>
-//       </View>
-//       <View style={styles.section}>
-//         <Text>Section #2</Text>
-//       </View>
-//     </Page>
-//   </Document>
-// );
+// export default function PdfApp() {
+//   const [numPages, setNumPages] = React.useState(null);
+//   const [pageNumber, setPageNumber] = React.useState(1);
+//   const [instance, updateInstance] = usePDF({
+//     document: (
+//       <Document file="./Runner8.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+//         <Page style={styles.page} pageNumber={pageNumber}>
+//           <View style={styles.section}>
+//             <Text>Section #1</Text>
+//           </View>
+//           <View style={styles.section}>
+//             <Text>Section #2</Text>
+//           </View>
+//         </Page>
+//       </Document>
+//     ),
+//   });
 
-// export default MyDocument;
+//   if (instance.loading) return <div>Loading...</div>;
+//   if (instance.error) return <div>Something went wrong: {error}</div>;
 
-import React, { useState } from "react";
-import { Document, Page } from "react-pdf";
+//   function onDocumentLoadSuccess({ numPages }) {
+//     setNumPages(numPages);
+//   }
 
-export function MyDocument() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+//   return (
+//     <div>
+//       <a href={instance.url} download="Runner8.pdf">
+//         Download
+//       </a>
+//       <p>
+//         //이전 페이지 보기
+//         <span
+//           onClick={() =>
+//             pageNumber > 1 ? setPageNumber(pageNumber - 1) : null
+//           }
+//         >
+//           &lt;
+//         </span>
+//         <span>
+//           Page {pageNumber} of {numPages}
+//         </span>
+//         //다음 페이지 보기
+//         <span
+//           onClick={() =>
+//             pageNumber < numPages ? setPageNumber(pageNumber + 1) : null
+//           }
+//         >
+//           &gt;
+//         </span>
+//       </p>
+//     </div>
+//   );
+// }
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+import React from "react";
+import ReactPDF, {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  PDFDownloadLink,
+} from "@react-pdf/renderer";
 
-  return (
-    <div>
-      <Document file="./Runner8.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>
-        //이전 페이지 보기
-        <span
-          onClick={() =>
-            pageNumber > 1 ? setPageNumber(pageNumber - 1) : null
-          }
-        >
-          &lt;
-        </span>
-        <span>
-          Page {pageNumber} of {numPages}
-        </span>
-        //다음 페이지 보기
-        <span
-          onClick={() =>
-            pageNumber < numPages ? setPageNumber(pageNumber + 1) : null
-          }
-        >
-          &gt;
-        </span>
-      </p>
-    </div>
-  );
-}
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+
+// Create styles
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: "row",
+    backgroundColor: "#E4E4E4",
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1,
+  },
+});
+
+// Create Document Component
+const MyDocument = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #1</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #2</Text>
+      </View>
+    </Page>
+  </Document>
+);
+const MyDoc = () => (
+  <Document>
+    <Page>// My document data</Page>
+  </Document>
+);
+
+// ppt 에 다운로드 버튼 만들고 연결
+const PdfDownload = ({ pdf }) => (
+  <PDFDownloadLink document={<MyDoc />} fileName={pdf}>
+    {({ blob, url, loading, error }) =>
+      loading ? "Loading document..." : "💾"
+    }
+  </PDFDownloadLink>
+);
+
+export default PdfDownload;

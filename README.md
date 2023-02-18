@@ -7,6 +7,9 @@
     - [ ] React : HTML/JS/CSS 구조 맞추기
         - [x] 사진, 소개글
         - [ ] 포토폴리오 구현 영상 or 움짤 or 사진 슬라이드
+            - [ ] 모달로 만들기
+                - [ ] Scroll Css
+
         - [x] git, velog, insta link 버튼
         - [x] Contact Me
             - [x] modal (개인정보, 요청사항)
@@ -28,6 +31,9 @@
     - [ ] AWS 호스팅
 
     - [ ] wep page 조회수
+
+BufferedReader br = new BufferdReader(new InputStreamReader(System.in))
+int number = Integer.parseInt(br.readLine())
 
 ## 도메인
 
@@ -77,3 +83,9 @@
 - https://github.com/mxmzb/react-marquee-slider
 - https://github.com/tengbao/vanta
 - https://sweetalert2.github.io/
+
+####
+
+    - 라우팅 포폴 페이지
+    - Header 모든 페이지에 달기
+    - pdf Link 달기

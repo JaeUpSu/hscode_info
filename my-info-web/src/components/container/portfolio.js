@@ -1,6 +1,36 @@
 import styles from "./portfolio.module.css";
+import PdfDownload from "../../view/PptView";
+import styled from "styled-components";
+
+import FeedModal from "../modal/feed_modal";
+import { useState } from "react";
+
+const Btn = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 46px;
+
+  background: #1552f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+
+  margin-bottom: 80px;
+`;
 
 function PortFolio() {
+  const [modalOpen, setModalOpen] = useState(false); //modal창 노출 여부 결정
+  const showModal = () => {
+    setModalOpen(true); //클릭일때만 오픈
+  };
   return (
     <div id="2" className={styles.portfolio}>
       <h1 className={styles.portfolio_label}>Port-Folio</h1>
@@ -8,10 +38,7 @@ function PortFolio() {
 
       <div className={styles.band}>
         <div className={styles.item_1}>
-          <a
-            href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852"
-            className={styles.card}
-          >
+          <a className={styles.card}>
             <div
               className={`${styles.card_thumb} ${styles.card_thumb_one}`}
             ></div>
@@ -25,10 +52,7 @@ function PortFolio() {
           </a>
         </div>
         <div class="item-2">
-          <a
-            href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045"
-            className={styles.card}
-          >
+          <a className={styles.card}>
             <div
               className={`${styles.card_thumb} ${styles.card_thumb_two}`}
             ></div>
@@ -46,14 +70,14 @@ function PortFolio() {
                 FireStore 를 사용했다.{" "}
               </p>
               <span className={styles.card_cat}>App (Android & FireBase)</span>
+              <PdfDownload pdf={"Runner8.pdf"} />
+              <Btn onClick={showModal}>Detail</Btn>
+              {modalOpen && <FeedModal setModalOpen={setModalOpen} />}
             </article>
           </a>
         </div>
         <div class="item-3">
-          <a
-            href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724"
-            className={styles.card}
-          >
+          <a className={styles.card}>
             <div
               className={`${styles.card_thumb} ${styles.card_thumb_three}`}
             ></div>
