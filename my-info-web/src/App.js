@@ -5,9 +5,6 @@ import ItsMe from "./components/container/ItsMe";
 import PortFolio from "./components/container/portfolio";
 import Linked_In from "./components/container/linked_in";
 import BG from "./components/BG";
-import PdfDownload from "./view/PptView";
-
-import { PDFViewer } from "@react-pdf/renderer";
 
 function App() {
   return (
@@ -22,9 +19,6 @@ function App() {
         <PortFolio />
         <Linked_In />
       </body>
-      {/* <PDFViewer>
-        <MyDocument />
-      </PDFViewer> */}
     </div>
   );
 }

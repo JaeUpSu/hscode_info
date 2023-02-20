@@ -8,6 +8,11 @@
   text-align: center;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+  position: relative;
+}
+
+.portfolio:hover {
+  color: black;
 }
 
 .portfolio_label {
@@ -67,7 +72,8 @@
 }
 
 .card:hover {
-  top: -5px;
+  top: -2px;
+  color: #444;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -76,20 +82,12 @@
   display: flex;
 
   flex: 1;
-  justify-content: space-between;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.card_thumb_one {
-  background-image: url("../../image/my_info.png");
-}
-.card_thumb_two {
-  background-image: url("../../image/runner8.png");
-}
-.card_thumb_two strong {
+strong {
   margin-top: 30px;
-}
-.card_thumb_three {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);
 }
 .card_thumb {
   padding-bottom: 60%;
