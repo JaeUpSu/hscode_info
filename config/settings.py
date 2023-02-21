@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "users.apps.UsersConfig",
+    "ppts.apps.PptsConfig",
+    "feeds.apps.FeedsConfig",
     "rest_framework",
     "corsheaders"
 ]

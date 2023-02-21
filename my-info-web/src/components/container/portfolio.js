@@ -5,6 +5,7 @@ import FeedModal from "../modal/feed_modal";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Solid from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 const Btn = styled.button`
   display: flex;
@@ -12,7 +13,7 @@ const Btn = styled.button`
   justify-content: center;
   align-items: center;
 
-  width: 100%;
+  width: 163px;
   height: 46px;
 
   background: #1552f0;
@@ -38,10 +39,10 @@ const Btn = styled.button`
 
 const SliderBtn = styled.div`
   position: absolute;
-  top: 55%;
+  top: 54.5%;
   transform: translateY(-50%);
   width: 40px;
-  height: 69%;
+  height: 730px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +55,10 @@ const SliderBtn = styled.div`
   }
 `;
 
+const Title = styled.strong`
+  margin-top: 10px;
+`;
+
 function PortFolio() {
   const modalImgs = [
     "https://images.unsplash.com/photo-1496440543089-3d0eb669f6f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=788&q=80",
@@ -63,44 +68,12 @@ function PortFolio() {
     "https://images.unsplash.com/photo-1552694477-2a18dd7d4de0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
   ];
 
-  const pptList = [
-    {
-      title: "Let's run together",
-      name: "Runner 8",
-      img: "https://velog.velcdn.com/images/hugh0223/post/6bc72758-3b81-48bd-84d4-133136e9cad3/image.png",
-      text: "런닝을 한 후에 기록된 데이터를 통하여 타인과 경쟁도 할 수 있고 운동량도 알 수 있다. 그리고 다이어트 관련 기능으로 칼로리 사전과 이 주의 음식과 운동관련 데이터 통계가 있다.",
-    },
-    {
-      title: "Introduce how much you are needed",
-      name: "My info",
-      img: "https://velog.velcdn.com/images/hugh0223/post/6b329f7f-1869-4840-82fc-3ad2756e04af/image.png",
-      text: "",
-    },
-    {
-      title: "Someone ate a hotdog one day..",
-      name: "If i am dog..",
-      img: "https://user-images.githubusercontent.com/75062526/218747794-a7a61c77-d04b-4e50-be83-bbaa0e22b589.jpg",
-      text: "성향테스트입니다! 11문제를 나의 마음에 드는 답변을 고른다. 결과를 취합하여 6 종류의 개중 한마리가 결과로 나온다. 또한 각 결과를 저장한 6마리의 결과 비율도 나온다.",
-    },
-
-    {
-      title: "Introduce how much you are needed",
-      name: "My info",
-      img: "https://cdn.mygoyang.com/news/photo/202102/62807_75690_22.jpg",
-      text: "",
-    },
-    {
-      title: "Someone ate a hotdog one day..",
-      name: "If i am dog..",
-      img: "https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/146T/image/bylfRiG_5g7spyDzYhfwZ4jjAp0.jpg",
-      text: "성향테스트입니다! 11문제를 나의 마음에 드는 답변을 고른다. 결과를 취합하여 6 종류의 개중 한마리가 결과로 나온다. 또한 각 결과를 저장한 6마리의 결과 비율도 나온다.",
-    },
-  ];
-
   const [isNext, setIsNext] = useState(false);
   const [current, setCurrent] = useState(0);
   const [order, setOrder] = useState([1, 2, 3]);
+  const [feeds, setFeeds] = useState([]);
   const [modalOpen, setModalOpen] = useState(false); //modal창 노출 여부 결정
+
   const showModal = () => {
     setModalOpen(true); //클릭일때만 오픈
   };
@@ -112,7 +85,7 @@ function PortFolio() {
     }
   };
   const onNext = () => {
-    if (order[2] < pptList.length - 1) {
+    if (order[2] < feeds.length - 1) {
       setIsNext(true);
       setCurrent((current) => current + 1);
     }
@@ -132,6 +105,18 @@ function PortFolio() {
     setOrder(reOrder);
   }, [current]);
 
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/v1/feeds/")
+      .then((response) => {
+        setFeeds([...response.data]);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div id="2" className={styles.portfolio}>
       <h1 className={styles.portfolio_label}>Port-Folio</h1>
@@ -143,24 +128,24 @@ function PortFolio() {
             <div
               className={styles.card_thumb}
               style={{
-                backgroundImage: `url(${pptList[order[0]].img})`,
+                backgroundImage: `url(${feeds[order[0]]?.img})`,
               }}
             ></div>
             <article className={styles.card_article}>
-              <h1 className={styles.card_title}>
-                {pptList[order[0]].title}
-                <br /> <strong>{pptList[order[0]].name}</strong>
-              </h1>
-              <br /> <br />
-              <p className={styles.card_text}>{pptList[order[0]].text}</p>
+              <div>
+                <h1 className={styles.card_title}>
+                  {feeds[order[0]]?.subtitle}
+                  <br /> <Title>{feeds[order[0]]?.title}</Title>
+                </h1>
+                <br /> <br />
+                <p className={styles.card_text}>{feeds[order[0]]?.contents}</p>
+              </div>
               <div>
                 <Btn onClick={showModal}>Detail</Btn>
                 {modalOpen && (
                   <FeedModal setModalOpen={setModalOpen} imgs={modalImgs} />
                 )}
-                <span className={styles.card_cat}>
-                  App (Android & FireBase)
-                </span>
+                <span className={styles.card_cat}>{feeds[order[0]]?.info}</span>
               </div>{" "}
             </article>
           </a>
@@ -170,22 +155,22 @@ function PortFolio() {
             <div
               className={styles.card_thumb}
               style={{
-                backgroundImage: `url(${pptList[order[1]].img})`,
+                backgroundImage: `url(${feeds[order[1]]?.img})`,
               }}
             ></div>
             <article className={styles.card_article}>
               <h1 className={styles.card_title}>
-                {pptList[order[1]].title}
-                <br /> <strong>{pptList[order[1]].name}</strong>
+                {feeds[order[1]]?.subtitle}
+                <br /> <Title>{feeds[order[1]]?.title}</Title>
               </h1>{" "}
               <br /> <br />
-              <p className={styles.card_text}>{pptList[order[1]].text}</p>
+              <p className={styles.card_text}>{feeds[order[1]]?.contents}</p>
               <div>
                 <Btn onClick={showModal}>Detail</Btn>
                 {modalOpen && (
                   <FeedModal setModalOpen={setModalOpen} imgs={modalImgs} />
                 )}
-                <span className={styles.card_cat}>Web (React & Django)</span>
+                <span className={styles.card_cat}>{feeds[order[1]]?.info}</span>
               </div>
             </article>
           </a>
@@ -196,22 +181,22 @@ function PortFolio() {
             <div
               className={styles.card_thumb}
               style={{
-                backgroundImage: `url(${pptList[order[2]].img})`,
+                backgroundImage: `url(${feeds[order[2]]?.img})`,
               }}
             ></div>
             <article className={styles.card_article}>
               <h1 className={styles.card_title}>
-                {pptList[order[2]].title}
-                <br /> <strong>{pptList[order[2]].name}</strong>
+                {feeds[order[2]]?.subtitle}
+                <br /> <Title>{feeds[order[2]]?.title}</Title>
               </h1>
               <br /> <br />
-              <p className={styles.card_text}>{pptList[order[2]].text}</p>
+              <p className={styles.card_text}>{feeds[order[2]]?.contents}</p>
               <div>
                 <Btn onClick={showModal}>Detail</Btn>
                 {modalOpen && (
                   <FeedModal setModalOpen={setModalOpen} imgs={modalImgs} />
                 )}
-                <span className={styles.card_cat}>WEB (REACT & FIREBASE)</span>
+                <span className={styles.card_cat}>{feeds[order[2]]?.info}</span>
               </div>
             </article>
           </a>

@@ -7,8 +7,8 @@
     - [ ] React : HTML/JS/CSS 구조 맞추기
         - [x] 사진, 소개글
         - [ ] 포토폴리오 구현 영상 or 움짤 or 사진 슬라이드
-            - [ ] 모달로 만들기
-                - [ ] Scroll Css
+            - [x] 모달로 만들기
+            - [ ] 내용 입력
 
         - [x] git, velog, insta link 버튼
         - [x] Contact Me
@@ -18,22 +18,19 @@
 
         - [x] 편집버튼 만들기
             - [x] 각 text 에 수정버튼
-            - [x] feeds DB 연동
+            - [ ] feeds DB 연동
 
     - [x] Django 로 API 설계
         - [x] models 설계
             - [x] users, feeds
-        - [ ] serializers 설계
-        - [ ] views 설계
-        - [ ] admin 설정
-        - [ ] urls 설정
+        - [x] serializers 설계
+        - [x] views 설계
+        - [x] admin 설정
+        - [x] urls 설정
 
     - [ ] AWS 호스팅
 
     - [ ] wep page 조회수
-
-BufferedReader br = new BufferdReader(new InputStreamReader(System.in))
-int number = Integer.parseInt(br.readLine())
 
 ## 도메인
 
@@ -56,13 +53,14 @@ int number = Integer.parseInt(br.readLine())
               - [x] contact me
 
         - [ ] container
-            - [ ] top
+            - [x] top
                 - [x] background
                 - [x] info
 
             - [ ] portfolio
                 - [x] title
                 - [x] contents
+                - [x] slider
                 - [ ] gif or video
 
             - [x] linked in
@@ -86,6 +84,5 @@ int number = Integer.parseInt(br.readLine())
 
 ####
 
-    - 라우팅 포폴 페이지
     - Header 모든 페이지에 달기
     - pdf Link 달기
