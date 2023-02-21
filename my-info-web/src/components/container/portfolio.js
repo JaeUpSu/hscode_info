@@ -67,34 +67,70 @@ function PortFolio() {
     {
       title: "Let's run together",
       name: "Runner 8",
-      img: "../../image/runner8.png",
+      img: "https://velog.velcdn.com/images/hugh0223/post/6bc72758-3b81-48bd-84d4-133136e9cad3/image.png",
       text: "런닝을 한 후에 기록된 데이터를 통하여 타인과 경쟁도 할 수 있고 운동량도 알 수 있다. 그리고 다이어트 관련 기능으로 칼로리 사전과 이 주의 음식과 운동관련 데이터 통계가 있다.",
     },
     {
       title: "Introduce how much you are needed",
       name: "My info",
-      img: "../../image/my_info.png",
+      img: "https://velog.velcdn.com/images/hugh0223/post/6b329f7f-1869-4840-82fc-3ad2756e04af/image.png",
       text: "",
     },
     {
       title: "Someone ate a hotdog one day..",
       name: "If i am dog..",
       img: "https://user-images.githubusercontent.com/75062526/218747794-a7a61c77-d04b-4e50-be83-bbaa0e22b589.jpg",
-      text: "성향테스트입니다! 11 문제를 나의 마음에 드는 답변을 고른다. 결과를 취합하여 6 종류의 개중 한마리가 결과로 나온다. 또한 각 결과를 저장한 6마리의 결과 비율도 나온다.",
+      text: "성향테스트입니다! 11문제를 나의 마음에 드는 답변을 고른다. 결과를 취합하여 6 종류의 개중 한마리가 결과로 나온다. 또한 각 결과를 저장한 6마리의 결과 비율도 나온다.",
+    },
+
+    {
+      title: "Introduce how much you are needed",
+      name: "My info",
+      img: "https://cdn.mygoyang.com/news/photo/202102/62807_75690_22.jpg",
+      text: "",
+    },
+    {
+      title: "Someone ate a hotdog one day..",
+      name: "If i am dog..",
+      img: "https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/146T/image/bylfRiG_5g7spyDzYhfwZ4jjAp0.jpg",
+      text: "성향테스트입니다! 11문제를 나의 마음에 드는 답변을 고른다. 결과를 취합하여 6 종류의 개중 한마리가 결과로 나온다. 또한 각 결과를 저장한 6마리의 결과 비율도 나온다.",
     },
   ];
 
-  const [currentPpt, setCurrentPpt] = useState(0);
+  const [isNext, setIsNext] = useState(false);
+  const [current, setCurrent] = useState(0);
+  const [order, setOrder] = useState([1, 2, 3]);
   const [modalOpen, setModalOpen] = useState(false); //modal창 노출 여부 결정
   const showModal = () => {
     setModalOpen(true); //클릭일때만 오픈
   };
-  let order = [];
+
+  const onBack = () => {
+    if (order[0] > 0) {
+      setIsNext(false);
+      setCurrent((current) => current - 1);
+    }
+  };
+  const onNext = () => {
+    if (order[2] < pptList.length - 1) {
+      setIsNext(true);
+      setCurrent((current) => current + 1);
+    }
+  };
+
   useEffect(() => {
-    pptList.map((item, idx) => {
-      return (order[idx] = idx);
+    let reOrder = [];
+    order.forEach((item) => {
+      let itemValue = item;
+      if (isNext) {
+        itemValue += 1;
+      } else {
+        itemValue -= 1;
+      }
+      reOrder.push(itemValue);
     });
-  }, []);
+    setOrder(reOrder);
+  }, [current]);
 
   return (
     <div id="2" className={styles.portfolio}>
@@ -107,7 +143,7 @@ function PortFolio() {
             <div
               className={styles.card_thumb}
               style={{
-                backgroundImage: `url("../../image/runner8.png")`,
+                backgroundImage: `url(${pptList[order[0]].img})`,
               }}
             ></div>
             <article className={styles.card_article}>
@@ -134,7 +170,7 @@ function PortFolio() {
             <div
               className={styles.card_thumb}
               style={{
-                backgroundImage: `url("../../image/runner8.png")`,
+                backgroundImage: `url(${pptList[order[1]].img})`,
               }}
             ></div>
             <article className={styles.card_article}>
@@ -160,7 +196,7 @@ function PortFolio() {
             <div
               className={styles.card_thumb}
               style={{
-                backgroundImage: `url("../../image/runner8.png")`,
+                backgroundImage: `url(${pptList[order[2]].img})`,
               }}
             ></div>
             <article className={styles.card_article}>
@@ -183,42 +219,15 @@ function PortFolio() {
       </div>
       <SliderBtn
         class="back-btn"
-        style={{ left: "0px", color: "rgb(56 56 56)" }}
-        onClick={() => {
-          setCurrentPpt((current) => {
-            current--;
-            if (current < 0) {
-              current = pptList.length - 1;
-            }
-            return current;
-          });
-
-          let reorder = [];
-          let idx = 0;
-          let pptIdx = currentPpt;
-          while (reorder.length <= order.length) {
-            reorder[idx++] = pptIdx++;
-            if (pptIdx == order.lenth) {
-              pptIdx = 0;
-            }
-          }
-          setOrder(reorder);
-        }}
+        style={{ left: "10px", color: "rgb(56 56 56)" }}
+        onClick={onBack}
       >
         <FontAwesomeIcon size="2x" icon={Solid.faLessThan} />
       </SliderBtn>
       <SliderBtn
         class="next-btn"
-        style={{ right: "0px", color: "rgb(56 56 56)" }}
-        onClick={() => {
-          setCurrentPpt((current) => {
-            current++;
-            if (current == pptList.length) {
-              current = 0;
-            }
-            return current;
-          });
-        }}
+        style={{ right: "10px", color: "rgb(56 56 56)" }}
+        onClick={onNext}
       >
         <FontAwesomeIcon size="2x" icon={Solid.faGreaterThan} />
       </SliderBtn>
