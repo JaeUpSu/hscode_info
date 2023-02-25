@@ -53,7 +53,7 @@ const Companies = ({ size, onStartPerformance, onEndPerformance }) => {
 
   useEffect(() => {
     setKey(nanoid());
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, [size, size.width]);
 
   let scale = 0.3;

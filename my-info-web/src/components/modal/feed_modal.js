@@ -18,7 +18,7 @@ const FeedContainer = styled.div`
   padding: 10px 10px 20px;
 
   width: 550px;
-  max-height: 700px;
+  max-height: 650px;
 
   margin: 0 auto;
 
@@ -36,7 +36,7 @@ const FeedWrapper = styled.div`
   position: relative;
 `;
 const FeedHeader = styled.div`
-  width: 100%;
+  width: 500px;
   height: 100%;
   border-radius: 3px;
   max-height: 60px;
@@ -90,6 +90,9 @@ const Comments = styled.p`
   font-size: 12px;
   margin-bottom: 0px;
   text-align: start;
+  display: flex;
+  position: relative;
+  flex-direction: column;
 `;
 
 const ImgSlider = styled.div`
@@ -102,23 +105,30 @@ const ImgSlider = styled.div`
 
 const ImgBox = styled.div`
   position: absolute;
-  top: 0px;
-  left: -233px;
-  width: 500px;
+  width: 530px;
+  display: flex;
+  justify-content: center;
 `;
 
 const Img = styled.img`
   position: absolute;
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  width: 500px;
   opacity: 0;
   transform: scale(1.1);
   transition: all 500ms ease-in-out;
-  padding-right: 6px;
+  padding: 40px;
   &.active {
     opacity: 1;
     transform: scale(1);
+  }
+`;
+
+const Contents = styled.p`
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    position: absolute;
+    top: 10%;
   }
 `;
 
@@ -131,9 +141,8 @@ const SliderBtn = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: #444;
   font-size: 25px;
-  background: rgba(0, 0, 0, 0.2);
   transition: all 300ms ease-in-out;
   &:hover {
     background: rgba(0, 0, 0, 0.5);
@@ -154,16 +163,16 @@ const Thumbnail = styled.img`
   width: 60px;
   height: 40px;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1px solid black;
   &.active {
-    border: 2px solid #fff;
+    border: 3px solid black;
   }
 `;
 
-function FeedModal({ setModalOpen, imgs }) {
+function FeedModal({ setModalOpen, ppts }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [imagesActive, setImagesActive] = useState(
-    new Array(imgs.length).fill("btn")
+    new Array(ppts.length).fill("btn")
   );
 
   useEffect(() => {
@@ -209,33 +218,27 @@ function FeedModal({ setModalOpen, imgs }) {
             <Time>5 분전</Time>
           </FeedHeaderRightBox>
         </FeedHeader>
-        {/* <FeedPhoto
-        style={{
-          backgroundImage:
-            "url(https://cdn.eyesmag.com/content/uploads/sliderImages/2021/07/19/005-d020cb23-f09f-4f55-bfca-b2540f194ea2.jpg)",
-        }}
-      /> */}
 
         <ImgSlider>
           <ImgBox>
-            {imgs.map((item, idx) => {
+            {ppts.map((item, idx) => {
               return (
                 <Img
                   key={idx}
                   values={idx}
-                  src={item}
+                  src={item.img}
                   className={currentImage == idx ? "active" : ""}
                 />
               );
             })}
           </ImgBox>
           <ThumbnailBox>
-            {imgs.map((item, idx) => {
+            {ppts.map((item, idx) => {
               return (
                 <Thumbnail
                   key={idx}
                   values={idx}
-                  src={item}
+                  src={item.img}
                   onClick={onThumbnailClick}
                   className={currentImage == idx ? "active" : ""}
                 />
@@ -248,7 +251,7 @@ function FeedModal({ setModalOpen, imgs }) {
               setCurrentImage((current) => {
                 current--;
                 if (current < 0) {
-                  current = imgs.length - 1;
+                  current = ppts.length - 1;
                 }
                 return current;
               });
@@ -262,7 +265,7 @@ function FeedModal({ setModalOpen, imgs }) {
             onClick={() => {
               setCurrentImage((current) => {
                 current++;
-                if (current == imgs.length) {
+                if (current == ppts.length) {
                   current = 0;
                 }
                 return current;
@@ -282,14 +285,16 @@ function FeedModal({ setModalOpen, imgs }) {
           >
             HyeonSu{" "}
           </b>
-          이재용 삼성전자 회장이 수사받을 당시 변호인들이 한겨레신문을 상대로
-          제기한 정정보도 청구 소송에서 다시 한번 패소했다. 서울중앙지법
-          민사8-2부(김봉원 강성훈 권순민 부장판사)는 16일 이 회장의 전 변호인인
-          최재경, 이동열 변호사가 한겨레신문을 상대로 낸 정정보도 청구 소송에서
-          1심과 같이 원고 패소로 판결했다. 한겨레신문은 2020년 9월 16일 검찰
-          관계자를 인용해 "이 변호사가 이 부회장의 구속영장이 청구되기 전 수사
-          검사에게 연락해 '삼성생명 관련 부분은 예민하니 빼 달라. 최 변호사
-          요청이다'라고 말했다"고 보도했다.
+          {ppts.map((item, idx) => {
+            return (
+              <Contents
+                key={idx}
+                className={currentImage == idx ? "active" : ""}
+              >
+                {item.contents}
+              </Contents>
+            );
+          })}
         </Comments>
       </FeedWrapper>
     </FeedContainer>

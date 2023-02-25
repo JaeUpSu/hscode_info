@@ -13,7 +13,7 @@ const Btn = styled.button`
   justify-content: center;
   align-items: center;
 
-  width: 163px;
+  width: 180px;
   height: 46px;
 
   background: #1552f0;
@@ -55,26 +55,31 @@ const SliderBtn = styled.div`
   }
 `;
 
+const TitleBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+`;
 const Title = styled.strong`
   margin-top: 10px;
+  font-size: 30px;
 `;
 
 function PortFolio() {
-  const modalImgs = [
-    "https://images.unsplash.com/photo-1496440543089-3d0eb669f6f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=788&q=80",
-    "https://images.unsplash.com/photo-1619961310056-1f5c8df685d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
-    "https://images.unsplash.com/photo-1503001831666-8f3cf3a24544?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
-    "https://images.unsplash.com/photo-1526306063970-d5498ad00f1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
-    "https://images.unsplash.com/photo-1552694477-2a18dd7d4de0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
-  ];
-
   const [isNext, setIsNext] = useState(false);
   const [current, setCurrent] = useState(0);
   const [order, setOrder] = useState([1, 2, 3]);
   const [feeds, setFeeds] = useState([]);
+  const [modalIdx, setModalIdx] = useState(0); //modal창 노출 여부 결정
   const [modalOpen, setModalOpen] = useState(false); //modal창 노출 여부 결정
 
-  const showModal = () => {
+  const showModal = (e) => {
+    const idx = Number(e.currentTarget.getAttribute("value"));
+    console.log(idx);
+    console.log(feeds[order[0]].ppts);
+    console.log(feeds[order[1]].ppts);
+    console.log(feeds[order[2]].ppts);
+    setModalIdx(order[idx]);
     setModalOpen(true); //클릭일때만 오픈
   };
 
@@ -133,17 +138,24 @@ function PortFolio() {
             ></div>
             <article className={styles.card_article}>
               <div>
-                <h1 className={styles.card_title}>
-                  {feeds[order[0]]?.subtitle}
+                <TitleBox>
+                  <h1 className={styles.card_title}>
+                    {feeds[order[0]]?.subtitle}
+                  </h1>{" "}
                   <br /> <Title>{feeds[order[0]]?.title}</Title>
-                </h1>
+                </TitleBox>
                 <br /> <br />
                 <p className={styles.card_text}>{feeds[order[0]]?.contents}</p>
               </div>
               <div>
-                <Btn onClick={showModal}>Detail</Btn>
-                {modalOpen && (
-                  <FeedModal setModalOpen={setModalOpen} imgs={modalImgs} />
+                <Btn onClick={showModal} value={0}>
+                  Detail
+                </Btn>
+                {modalOpen && modalIdx == order[0] && (
+                  <FeedModal
+                    setModalOpen={setModalOpen}
+                    ppts={feeds[modalIdx]?.ppts}
+                  />
                 )}
                 <span className={styles.card_cat}>{feeds[order[0]]?.info}</span>
               </div>{" "}
@@ -159,16 +171,23 @@ function PortFolio() {
               }}
             ></div>
             <article className={styles.card_article}>
-              <h1 className={styles.card_title}>
-                {feeds[order[1]]?.subtitle}
+              <TitleBox>
+                <h1 className={styles.card_title}>
+                  {feeds[order[1]]?.subtitle}
+                </h1>{" "}
                 <br /> <Title>{feeds[order[1]]?.title}</Title>
-              </h1>{" "}
+              </TitleBox>
               <br /> <br />
               <p className={styles.card_text}>{feeds[order[1]]?.contents}</p>
               <div>
-                <Btn onClick={showModal}>Detail</Btn>
-                {modalOpen && (
-                  <FeedModal setModalOpen={setModalOpen} imgs={modalImgs} />
+                <Btn onClick={showModal} value={1}>
+                  Detail
+                </Btn>
+                {modalOpen && modalIdx == order[1] && (
+                  <FeedModal
+                    setModalOpen={setModalOpen}
+                    ppts={feeds[modalIdx]?.ppts}
+                  />
                 )}
                 <span className={styles.card_cat}>{feeds[order[1]]?.info}</span>
               </div>
@@ -185,16 +204,23 @@ function PortFolio() {
               }}
             ></div>
             <article className={styles.card_article}>
-              <h1 className={styles.card_title}>
-                {feeds[order[2]]?.subtitle}
+              <TitleBox>
+                <h1 className={styles.card_title}>
+                  {feeds[order[2]]?.subtitle}
+                </h1>
                 <br /> <Title>{feeds[order[2]]?.title}</Title>
-              </h1>
+              </TitleBox>
               <br /> <br />
               <p className={styles.card_text}>{feeds[order[2]]?.contents}</p>
               <div>
-                <Btn onClick={showModal}>Detail</Btn>
-                {modalOpen && (
-                  <FeedModal setModalOpen={setModalOpen} imgs={modalImgs} />
+                <Btn onClick={showModal} value={2}>
+                  Detail
+                </Btn>
+                {modalOpen && modalIdx == order[2] && (
+                  <FeedModal
+                    setModalOpen={setModalOpen}
+                    ppts={feeds[setModalIdx]?.ppts}
+                  />
                 )}
                 <span className={styles.card_cat}>{feeds[order[2]]?.info}</span>
               </div>
