@@ -85,7 +85,7 @@ const Time = styled.span`
 const Comments = styled.p`
   width: 100%;
   padding: 18px;
-  padding-top: 23px;
+  padding-top: 0px;
   padding-bottom: 5px;
   font-size: 12px;
   margin-bottom: 0px;
@@ -113,10 +113,11 @@ const ImgBox = styled.div`
 const Img = styled.img`
   position: absolute;
   width: 500px;
+  top: 40px;
   opacity: 0;
   transform: scale(1.1);
   transition: all 500ms ease-in-out;
-  padding: 40px;
+  padding: 0px 40px;
   &.active {
     opacity: 1;
     transform: scale(1);
@@ -125,10 +126,9 @@ const Img = styled.img`
 
 const Contents = styled.p`
   opacity: 0;
+  position: absolute;
   &.active {
     opacity: 1;
-    position: absolute;
-    top: 10%;
   }
 `;
 
@@ -171,11 +171,10 @@ const Thumbnail = styled.img`
 
 function FeedModal({ setModalOpen, ppts }) {
   const [currentImage, setCurrentImage] = useState(0);
-  const [imagesActive, setImagesActive] = useState(
-    new Array(ppts.length).fill("btn")
-  );
+  const [imagesActive, setImagesActive] = useState(new Array(10).fill("btn"));
 
   useEffect(() => {
+    console.log("check" + ppts?.length);
     imagesActive[0] = "btn active";
     setImagesActive(imagesActive);
   }, []);
@@ -200,14 +199,6 @@ function FeedModal({ setModalOpen, ppts }) {
             onClick={closeModal}
           />
           <FeedHeaderRightBox>
-            <FontAwesomeIcon
-              style={{
-                color: true ? "tomato" : "inherit",
-                marginRight: "25px",
-              }}
-              size="2x"
-              icon={faHeart}
-            />
             <ProfileImg
               style={{
                 backgroundImage:
@@ -281,20 +272,29 @@ function FeedModal({ setModalOpen, ppts }) {
             style={{
               fontWeight: "800",
               paddingRight: "5px",
+              padding: "10px 0px",
             }}
           >
             HyeonSu{" "}
           </b>
-          {ppts.map((item, idx) => {
-            return (
-              <Contents
-                key={idx}
-                className={currentImage == idx ? "active" : ""}
-              >
-                {item.contents}
-              </Contents>
-            );
-          })}
+          <div
+            style={{
+              position: "relative",
+              height: "400px",
+              marginBottom: "25px",
+            }}
+          >
+            {ppts.map((item, idx) => {
+              return (
+                <Contents
+                  key={idx}
+                  className={currentImage == idx ? "active" : ""}
+                >
+                  {item.contents}
+                </Contents>
+              );
+            })}
+          </div>
         </Comments>
       </FeedWrapper>
     </FeedContainer>

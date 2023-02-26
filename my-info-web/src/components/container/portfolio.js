@@ -75,10 +75,12 @@ function PortFolio() {
 
   const showModal = (e) => {
     const idx = Number(e.currentTarget.getAttribute("value"));
-    console.log(idx);
-    console.log(feeds[order[0]].ppts);
-    console.log(feeds[order[1]].ppts);
-    console.log(feeds[order[2]].ppts);
+    if (feeds[order[idx]].ppts.length < 1) {
+      alert("아직 업로드 되지 않았습니다!");
+      return;
+    }
+    console.log(order[idx]);
+    console.log(feeds[order[idx]].ppts);
     setModalIdx(order[idx]);
     setModalOpen(true); //클릭일때만 오픈
   };
@@ -219,7 +221,7 @@ function PortFolio() {
                 {modalOpen && modalIdx == order[2] && (
                   <FeedModal
                     setModalOpen={setModalOpen}
-                    ppts={feeds[setModalIdx]?.ppts}
+                    ppts={feeds[modalIdx]?.ppts}
                   />
                 )}
                 <span className={styles.card_cat}>{feeds[order[2]]?.info}</span>
