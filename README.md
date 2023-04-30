@@ -1,8 +1,8 @@
 # hscode_info
 
-> 나를 소개하기 위한 web 이다.
+> 👨‍🏫 나를 소개하기 위한 web 이다.
 
-> React 와 DJango 를 cors header 와 csrf_token 을 어기지 않게 연동하고
+> 📰 React 와 DJango 를 cors header 와 csrf_token 을 어기지 않게 연동하고
   나를 소개하는 각 Contents 와 요청사항을 실시간으로 Discord bot 을 통해 받을 수 있는
   웹 페이지
 
