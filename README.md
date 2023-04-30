@@ -1,8 +1,11 @@
 # hscode_info
 
-> 👨‍🏫 나를 소개하기 위한 web 이다.
+## 👨‍🏫 Summary 
+나를 소개하기 위한 web 이다. 다른 외국 웹 개발자가 구현한 사이트를 보고 영감을 받아
+웹 개발자라면 나를 표현하는 웹이 있으면 좋을거라 생각해서 설계하고 구현했다.
 
-> 📰 React 와 DJango 를 cors header 와 csrf_token 을 어기지 않게 연동하고
+## 📰 Introduce  
+  React 와 DJango 를 cors header 와 csrf_token 을 어기지 않게 연동하고
   나를 소개하는 각 Contents 와 요청사항을 실시간으로 Discord bot 을 통해 받을 수 있는
   웹 페이지
 
