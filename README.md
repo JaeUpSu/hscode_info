@@ -1,6 +1,13 @@
 # hscode_info
 
-> 나를 소개하기 위한 web 이다.
+## 👨‍🏫 Summary 
+나를 소개하기 위한 web 이다. 다른 외국 웹 개발자가 구현한 사이트를 보고 영감을 받아
+웹 개발자라면 나를 표현하는 웹이 있으면 좋을거라 생각해서 설계하고 구현했다.
+
+## 📰 Introduce  
+  React 와 DJango 를 cors header 와 csrf_token 을 어기지 않게 연동하고
+  나를 소개하는 각 Contents 와 요청사항을 실시간으로 Discord bot 을 통해 받을 수 있는
+  웹 페이지
 
 ## 기능
 
@@ -18,7 +25,7 @@
 
         - [x] 편집버튼 만들기
             - [x] 각 text 에 수정버튼
-            - [ ] feeds DB 연동
+            - [x] feeds DB 연동
 
     - [x] Django 로 API 설계
         - [x] models 설계
@@ -28,10 +35,6 @@
         - [x] admin 설정
         - [x] urls 설정
 
-    - [ ] AWS 호스팅
-
-    - [ ] wep page 조회수
-
 ## 도메인
 
     - [x] users Model
@@ -40,11 +43,11 @@
     - [x] feeds Model
         - [x] columns : id, content, created
 
-    - [ ] Model methods
-        - [ ] methods : add, remove, update, show
+    - [x] Model methods
+        - [x] methods : add, remove, update, show
 
 
-    - [ ] react
+    - [x] react
         - [x] header
             - [x] top-menu
               - [x] It's me
@@ -52,16 +55,16 @@
               - [x] linked in
               - [x] contact me
 
-        - [ ] container
+        - [x] container
             - [x] top
                 - [x] background
                 - [x] info
 
-            - [ ] portfolio
+            - [x] portfolio
                 - [x] title
                 - [x] contents
                 - [x] slider
-                - [ ] gif or video
+                - [x] gif or video
 
             - [x] linked in
                 - [x] velog
