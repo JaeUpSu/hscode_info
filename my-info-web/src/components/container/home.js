@@ -51,11 +51,11 @@ const Home = () => {
           <br />
           <br />
           <p className={styles.info_more}>
-            I'am Back-End Developer.
+            I'am Front-End Developer.
             <br />
             My Goal is Full-stack Developer.
             <br />
-            Of course, I still know how to do front.
+            Of course, I know how to do back.
           </p>
         </p>
         <div className={styles.baro}>

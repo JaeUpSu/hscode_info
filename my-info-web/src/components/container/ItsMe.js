@@ -19,11 +19,11 @@ function ItsMe() {
         <ItsMeBg />
         <div className={styles.itsme_body}>
           <p className={styles.itsme_info}>
-            I'am Back-End Developer.
+            I'am Front-End Developer.
             <br />
             My Goal is Full-stack Developer.
             <br />
-            Of course, I still know how to play front.
+            Of course, I know how to play front.
           </p>
           <div class="accordion my-5" id="accordionExample">
             <div class="accordion-item mx-5 my-2 border border-dark border-3">

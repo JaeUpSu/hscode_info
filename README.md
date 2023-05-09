@@ -4,11 +4,11 @@
 
 ## 기능
 
-    - [ ] React : HTML/JS/CSS 구조 맞추기
+    - [x] React : HTML/JS/CSS 구조 맞추기
         - [x] 사진, 소개글
-        - [ ] 포토폴리오 구현 영상 or 움짤 or 사진 슬라이드
+        - [x] 포토폴리오 구현 영상 or 움짤 or 사진 슬라이드
             - [x] 모달로 만들기
-            - [ ] 내용 입력
+            - [x] 내용 입력
 
         - [x] git, velog, insta link 버튼
         - [x] Contact Me

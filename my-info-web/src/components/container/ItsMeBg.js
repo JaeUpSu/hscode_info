@@ -22,23 +22,6 @@ const Company = styled.div`
   height: ${(props) => props.scale * 75}px;
 `;
 
-const Circle = styled.div`
-  position: absolute;
-  transform: scale(0.5);
-  object-position: center center;
-  will-change: transform, opacity;
-  width: ${(props) => props.scale * 150}px;
-  height: ${(props) => props.scale * 150}px;
-  top: -50%;
-  left: -50%;
-  border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.07);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #00ed64;
-`;
-
 const Logo = styled.img`
   display: block;
   /* https://stackoverflow.com/questions/24843676/how-can-i-fit-a-square-html-image-inside-a-circle-border */
